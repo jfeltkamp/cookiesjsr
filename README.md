@@ -16,7 +16,7 @@ Easy plug-able cookie consent management tool.
 <html lang="de">
 <head>
   ...
-  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiejsr@0/dist/cookiejsr.min.css">
+  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@0/dist/cookiejsr.min.css">
 </head>
 <body>
   ...
@@ -24,7 +24,7 @@ Easy plug-able cookie consent management tool.
   <!-- The Place where cookiesjsr can live in. -->
   <div id="cookiesjsr"></div> 
   <script src="/path/to/your/cookiejsr-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiejsr@0/dist/cookiejsr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiejsr@0/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
 ``` 
