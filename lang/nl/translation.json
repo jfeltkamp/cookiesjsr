@@ -1,0 +1,57 @@
+{
+    "bannerText": "616/5000\nCookies zijn kleine tekstbestanden die door uw browser op uw apparaat worden geplaatst om bepaalde informatie op te slaan. Met behulp van de informatie die wordt opgeslagen en geretourneerd, kan een website herkennen dat u deze eerder hebt geopend en bezocht met de browser op uw eindapparaat. We gebruiken deze informatie om de website optimaal in te richten en weer te geven in overeenstemming met uw voorkeuren. Binnen dit proces wordt alleen de cookie zelf geïdentificeerd op uw apparaat. Persoonlijke gegevens worden alleen opgeslagen na uw uitdrukkelijke toestemming of wanneer dit absoluut noodzakelijk is om gebruik te kunnen maken van de dienst die door ons wordt aangeboden en die door u wordt geopend.",
+    "settings": "Instellingen",
+    "acceptAll": "Sta alles toe",
+    "close": "Sluit",
+    "settingsAllServices": "Voorkeur voor alle diensten",
+    "allowed": "toegestaan",
+    "denied": "geweigerd",
+    "readMore": "Lees meer",
+    "officialWebsite": "Bekijk de officiële website",
+    "cookieSettings": "Cookie instellingen",
+    "allowAll": "Sta alles toe",
+    "denyAll": "Alles ontkennen",
+    "saveSettings": "Opslaan",
+    "privacyPolicy": "Privacybeleid",
+    "imprint": "Afdruk",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "credit": "",
+
+    "default": {
+        "title": "Wat zijn cookies?",
+        "details": "Cookies zijn kleine tekstbestanden die door uw browser op uw apparaat worden geplaatst om bepaalde informatie op te slaan. Met behulp van de informatie die wordt opgeslagen en geretourneerd, kan een website herkennen dat u deze eerder hebt geopend en bezocht met de browser op uw eindapparaat. We gebruiken deze informatie om de website optimaal in te richten en weer te geven in overeenstemming met uw voorkeuren. Binnen dit proces wordt alleen de cookie zelf geïdentificeerd op uw apparaat. Persoonlijke gegevens worden alleen opgeslagen na uw uitdrukkelijke toestemming of wanneer dit absoluut noodzakelijk is noodzakelijk om gebruik te kunnen maken van de dienst die door ons wordt aangeboden en die door u wordt geopend."
+    },
+    "ads": {
+        "title": "Advertentienetwerk",
+        "details": "Advertentienetwerken kunnen inkomsten genereren door advertentieruimte op de site te verkopen."
+    },
+    "analytic": {
+        "title": "Marketingcookies",
+        "details": "Marketingcookies zijn afkomstig van externe reclamebedrijven (\" cookies van derden \") en worden gebruikt om informatie te verzamelen over de door de gebruiker bezochte websites. Het doel hiervan is het creëren en weergeven van doelgroepgerichte inhoud en reclame voor de gebruiker."
+    },
+    "social": {
+        "title": "Sociale netwerken",
+        "details": "Sociale netwerken kunnen de bruikbaarheid van de site verbeteren en helpen deze via de shares te promoten."
+    },
+    "video": {
+        "title": "Video's",
+        "details": "Services voor het delen van video's helpen om rich media op de site toe te voegen en de zichtbaarheid ervan te vergroten."
+    },
+    "comment": {
+        "title": "Comments",
+        "details": "Beheerders van opmerkingen vergemakkelijken het indienen van opmerkingen en bestrijden spam."
+    },
+    "support": {
+        "title": "Support",
+        "details": "Met ondersteuningsservices kunt u contact opnemen met het siteteam en helpen het te verbeteren."
+    },
+    "api": {
+        "title": "Prestatiecookies",
+        "details": "Prestatiecookies verzamelen geaggregeerde informatie over hoe onze website wordt gebruikt. Het doel hiervan is om de aantrekkelijkheid, inhoud en functionaliteit ervan te verbeteren. Deze cookies helpen ons om te bepalen of, hoe vaak en hoe lang bepaalde subpagina's van onze website wordt bezocht en in welke inhoud gebruikers bijzonder geïnteresseerd zijn. Zoektermen, land, regio en (indien van toepassing) de stad van waaruit de website wordt bezocht, worden ook geregistreerd, evenals het aandeel mobiele apparaten dat wordt gebruikt om toegang te krijgen tot de website We gebruiken deze informatie om statistische rapporten samen te stellen die ons helpen de inhoud van onze website aan uw behoeften aan te passen en ons aanbod te optimaliseren."
+    },
+    "other": {
+        "title": "Anders",
+        "details": "Services om webcontent weer te geven."
+    }
+}

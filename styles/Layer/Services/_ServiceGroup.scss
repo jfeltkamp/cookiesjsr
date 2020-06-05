@@ -1,0 +1,65 @@
+
+.cookiesjsr-service-group {
+  position: static !important;
+  line-height: 1.5em;
+  list-style: none;
+
+  &--tab {
+    min-height: 3rem;
+    padding: 1rem var(--default-margin, $default-margin);
+    color: var(--ci-dark, $ci-dark);
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0;
+    border: 0;
+    background: var(--ci-light, $ci-light);
+    border-bottom: 1px solid var(--ci-bg-light, $ci-bg-light);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @media (min-width: $md) {
+      padding: 1rem #{$default-margin+2rem} 1rem $default-margin;
+      width: calc(30% + 2rem);
+    }
+  }
+  &--content {
+    display: none;
+    @media (min-width: $md) {
+      position: absolute;
+      width: 70%;
+      height: 100%;
+      overflow: auto;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &--intro {
+    padding: 1rem var(--default-margin, $default-margin);
+  }
+
+  &.active {
+    .cookiesjsr-service-group--tab {
+      color: var(--ci-light, $ci-light);
+      background: var(--ci-light, $ci-light);
+      background: var(--ci-blue, $ci-blue);
+      border-bottom: 0 none;
+    }
+
+    .cookiesjsr-service-group--content {
+      display: block;
+      background: var(--ci-blue, $ci-blue);
+      color: var(--ci-light, $ci-light);
+      font-weight: 500;
+    }
+  }
+  &--services {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

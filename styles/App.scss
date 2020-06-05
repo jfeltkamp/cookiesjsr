@@ -1,0 +1,51 @@
+@import "./vars";
+@import './UI/Switch';
+@import './UI/Button';
+@import './UI/SetAllServices';
+@import './Banner/Banner';
+@import './Layer/Layer';
+
+.cookiesjsr {
+  --ci-blue: #{$ci-blue};
+  --ci-dark: #{$ci-dark};
+  --ci-light: #{$ci-light};
+  --ci-bg-light: #{$ci-bg-light};
+  --default-margin: #{$default-margin};
+
+  --btn-font-color: #{$ci-light};
+  --btn-border-color: #{$ci-light};
+  --btn-bg-color: #{$ci-blue};
+
+  --banner-logo-offset: 100px;
+  --banner-bg-color: #{$ci-blue};
+  --banner-font-color: #{$ci-light};
+  --banner-link-font-color: #{$ci-light};
+  --banner-btn-font-color: #{$ci-light};
+  --banner-btn-border-color: #{$ci-light};
+  --banner-btn-bg-color: #{$ci-blue};
+
+  --layer-bg-light: #{$ci-light};
+  --layer-bg-dark: #{$ci-blue};
+  --layer-font-light: #{$ci-light};
+  --layer-font-dark: #{$ci-dark};
+  --layer-border-color: #{$ci-bg-light};
+  --layer-title-color: #{$ci-dark};
+  --layer-header-height: #{$layer-header-height};
+  --layer-footer-height: #{$layer-footer-height};
+
+  --switch-border-color: #{$ci-bg-light};
+  --switch-handle-color: #{$ci-light};
+  --switch-bg-off: #{$ci-light};
+  --switch-bg-on: #{$switch-bg-on};
+  --switch-width: #{$switch-width};
+  --switch-height: #{$switch-height};
+}
+
+body .cookiesjsr--app {
+
+  &,
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}
+

@@ -1,0 +1,10 @@
+
+.cookiesjsr-btn {
+  &.denyAll {
+    display: none;
+
+    @media (min-width: $xl) {
+      display: inline-block;
+    }
+  }
+}

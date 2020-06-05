@@ -1,0 +1,55 @@
+
+.cookiesjsr-btn {
+    background-color: var(--btn-bg-color, $btn-bg-color);
+    color: var(--btn-font-color, $btn-font-color);
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    width: calc(100% - #{$default-margin*2});
+    text-transform: uppercase;
+    padding: 0 .8em;
+    font-size: .85rem;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 2px solid var(--btn-border-color, $btn-border-color);
+    margin: $default-margin/2;
+    opacity: .95;
+    transform: scale(1);
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+
+    @media (min-width: $sm) {
+        min-height: 48px;
+        font-size: 1rem;
+    }
+    @media (min-width: $lg) {
+        padding: 0 2em;
+    }
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    &.invert {
+        background-color: var(--btn-border-color, $btn-border-color);
+        border-color: var(--btn-bg-color, $btn-bg-color);
+        color: var(--btn-bg-color, $btn-bg-color);
+    }
+
+    &.important {
+        color: var(--btn-bg-color, $btn-bg-color);
+        background-color: var(--btn-font-color, $btn-font-color);
+
+        &.invert {
+            background-color: var(--btn-bg-color, $btn-bg-color);
+            border-color: var(--btn-bg-color, $btn-bg-color);
+            color: var(--btn-font-color, $btn-font-color);
+        }
+    }
+}
+
+

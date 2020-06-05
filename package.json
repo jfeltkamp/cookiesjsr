@@ -1,0 +1,19 @@
+{
+  "name": "cookiesjsr",
+  "description": "Cookies JSR. Easy plug-able cookie consent management tool.",
+  "version": "0.1.0",
+  "author": "Joachim Feltkamp <j.feltkamp@monoki.de> (https://monoki.de)",
+  "license": "GPL-3.0-or-later",
+  "repository": "jfeltkamp/cookiesjsr",
+  "dependencies": {},
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "dist/cookiesjsr.min.js",
+    "dist/cookiesjsr.min.css"
+  ],
+  "main": "dist/cookiesjsr.min.js",
+  "scripts": {
+    "lint": "eslint ."
+  }
+}

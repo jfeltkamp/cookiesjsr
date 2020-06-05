@@ -1,0 +1,34 @@
+
+.cookiesjsr-service {
+  display: flex;
+  align-items: center;
+  background-color: rgba($ci-bg-light, 0);
+  transition: background-color .3s ease;
+  &:hover {
+    background-color: rgba($ci-bg-light, .1);
+  }
+
+  &--description {
+    padding: #{$default-margin/2} #{$default-margin};
+    width: calc(100% - #{$default-margin * 2} - #{$switch-width});
+
+    h3 {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--layer-font-light, $layer-font-light);
+    }
+  }
+
+  &--links {
+    a {
+      color: var(--layer-font-light, $layer-font-light);
+      font-size: .75rem;
+    }
+  }
+
+  &--action {
+    padding: #{$default-margin/2} #{$default-margin};
+    width: calc(#{$default-margin * 2} + #{$switch-width});
+  }
+}

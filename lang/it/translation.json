@@ -1,0 +1,57 @@
+{
+    "bannerText": "I cookie sono piccoli file di testo che vengono inseriti dal tuo browser sul tuo dispositivo al fine di memorizzare determinate informazioni. Utilizzando le informazioni archiviate e restituite, un sito Web è in grado di riconoscere che è stato precedentemente effettuato l'accesso e visitato tramite il browser sul dispositivo finale. Utilizziamo queste informazioni per organizzare e visualizzare il sito Web in modo ottimale in base alle tue preferenze. All'interno di questo processo, solo il cookie stesso viene identificato sul tuo dispositivo. I dati personali vengono archiviati solo previo consenso espresso dell'utente o laddove ciò sia assolutamente necessario per consentire l'utilizzo del servizio fornito da noi e al quale l'utente accede.",
+    "settings": "Preferenze",
+    "acceptAll": "Consenti tutti",
+    "close": "Chiudi",
+    "settingsAllServices": "Preferenze per tutti i servizi",
+    "allowed": "permessa",
+    "denied": "negato",
+    "readMore": "Saperne di più",
+    "officialWebsite": "Sito ufficiale",
+    "cookieSettings": "Preferenze dei cookie",
+    "allowAll": "Consenti tutti",
+    "denyAll": "Nega tutti",
+    "saveSettings": "Salva",
+    "privacyPolicy": "Politica sulla riservatezza",
+    "imprint": "Impronta",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "credit": "",
+
+    "default": {
+        "title": "Cosa sono i cookie?",
+        "details": "I cookie sono piccoli file di testo che vengono inseriti dal tuo browser sul tuo dispositivo al fine di memorizzare determinate informazioni. Utilizzando le informazioni che vengono archiviate e restituite, un sito Web può riconoscere che hai già avuto accesso e visitato in precedenza utilizzando il browser sul tuo dispositivo finale. Utilizziamo queste informazioni per organizzare e visualizzare il sito Web in modo ottimale in base alle tue preferenze. All'interno di questo processo, solo il cookie stesso viene identificato sul tuo dispositivo. I dati personali vengono archiviati solo previo tuo esplicito consenso o laddove ciò sia assolutamente necessario per consentire l'utilizzo del servizio fornito da noi e al quale l'utente ha avuto accesso."
+    },
+    "ads": {
+        "title": "Rete pubblicitaria",
+        "details": "Le reti pubblicitarie possono generare entrate vendendo spazi pubblicitari sul sito."
+    },
+    "analytic": {
+        "title": "Cookie di marketing",
+        "details": "I cookie di marketing provengono da società pubblicitarie esterne (\" cookie di terze parti \") e vengono utilizzati per raccogliere informazioni sui siti Web visitati dall'utente. Lo scopo è quello di creare e visualizzare contenuti orientati al gruppo target e pubblicità per l'utente."
+    },
+    "social": {
+        "title": "Social network",
+        "details": "I social network possono migliorare l'usabilità del sito e contribuire a promuoverlo tramite le condivisioni."
+    },
+    "video": {
+        "title": "Video",
+        "details": "I servizi di condivisione video aiutano ad aggiungere contenuti multimediali sul sito e aumentarne la visibilità."
+    },
+    "comment": {
+        "title": "Commenti",
+        "details": "I gestori dei commenti facilitano l'archiviazione dei commenti e combattono lo spam."
+    },
+    "support": {
+        "title": "Support",
+        "details": "I servizi di supporto ti consentono di entrare in contatto con il team del sito e di aiutarti a migliorarlo."
+    },
+    "api": {
+        "title": "Cookie prestazionali",
+        "details": "I cookie per le prestazioni raccolgono informazioni aggregate su come viene utilizzato il nostro sito Web. Lo scopo di questo è migliorare la sua attrattiva, contenuto e funzionalità. Questi cookie ci aiutano a determinare se, quanto spesso e per quanto tempo determinate sottopagine di si accede al nostro sito Web e ai contenuti a cui gli utenti sono particolarmente interessati. Vengono registrati anche i termini di ricerca, il paese, la regione e (ove applicabile) la città da cui si accede al sito Web, così come la percentuale di dispositivi mobili utilizzati per accedere al sito Web Usiamo queste informazioni per compilare report statistici che ci aiutano a personalizzare il contenuto del nostro sito Web in base alle vostre esigenze e ottimizzare la nostra offerta."
+    },
+    "other": {
+        "title": "Altro",
+        "details": "Servizi per visualizzare contenuti web."
+    }
+}

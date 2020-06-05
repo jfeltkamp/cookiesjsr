@@ -1,0 +1,38 @@
+
+.cookiesjsr-switch {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: var(--switch-width, $switch-width);
+  height: var(--switch-height, $switch-height);
+  border-radius: var(--switch-height, $switch-height);
+  background-color: var(--switch-bg-off, $switch-bg-off);
+  cursor: pointer;
+  box-shadow: inset -1px 2px 1px rgba(#000, .25);
+  border: 0;
+  transition: background-color .1s ease-in-out;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: var(--switch-height, $switch-height);
+    height: var(--switch-height, $switch-height);
+    border-radius: var(--switch-height, $switch-height);
+    transform: scale(1.2);
+    background-color: var(--switch-handle-color, $switch-handle-color);
+    border: 1px solid var(--switch-border-color, $switch-border-color);
+    transition: left .1s ease-in-out;
+    box-shadow: -1px 2px 1px rgba(#000, .25);
+  }
+
+  &.active {
+    background-color: var(--switch-bg-on, $switch-bg-on);
+    &:after {
+      left: $switch-width - $switch-height;
+    }
+  }
+}

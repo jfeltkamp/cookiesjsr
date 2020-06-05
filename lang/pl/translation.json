@@ -1,0 +1,57 @@
+{
+    "bannerText": "Pliki cookie to małe pliki tekstowe, które są umieszczane przez przeglądarkę na Twoim urządzeniu w celu przechowywania niektórych informacji. Korzystając z informacji, które są przechowywane i zwracane, witryna internetowa może rozpoznać, że wcześniej uzyskałeś do niej dostęp i odwiedziłeś ją za pomocą przeglądarki na urządzeniu końcowym. Używamy tych informacji, aby optymalnie zorganizować i wyświetlić stronę internetową zgodnie z Twoimi preferencjami. W ramach tego procesu na twoim urządzeniu identyfikowany jest tylko sam plik cookie. Dane osobowe są przechowywane wyłącznie po Twojej wyraźnej zgodzie lub gdy jest to absolutnie konieczne, aby umożliwić korzystanie z usługi świadczonej przez nas i dostępnej dla Ciebie.",
+    "settings": "Ustawienia",
+    "acceptAll": "Pozwól",
+    "close": "Zamknij",
+    "settingsAllServices": "Preferencja dla wszystkich usług",
+    "allowed": "dozwolony",
+    "denied": "odmówiono",
+    "readMore": "Więcej informacji",
+    "officialWebsite": "Zobacz oficjalną stronę internetową",
+    "cookieSettings": "Ustawienia plików cookie",
+    "allowAll": "Pozwól",
+    "denyAll": "Zaprzeczać",
+    "saveSettings": "Zapisz",
+    "privacyPolicy": "Polityka prywatności",
+    "imprint": "Odcisk",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "credit": "",
+
+    "default": {
+        "title": "Co to są pliki cookie?",
+        "details": "Pliki cookie to małe pliki tekstowe, które są umieszczane przez przeglądarkę na Twoim urządzeniu w celu przechowywania niektórych informacji. Korzystając z informacji, które są przechowywane i zwracane, witryna internetowa może rozpoznać, że wcześniej uzyskałeś do niej dostęp i odwiedziłeś ją za pomocą przeglądarki na urządzeniu końcowym. Używamy tych informacji, aby optymalnie zorganizować i wyświetlić stronę internetową zgodnie z Twoimi preferencjami. W ramach tego procesu na twoim urządzeniu identyfikowany jest tylko sam plik cookie. Dane osobowe są przechowywane wyłącznie po Twojej wyraźnej zgodzie lub gdy jest to absolutnie konieczne, aby umożliwić korzystanie z usługi świadczonej przez nas i dostępnej dla Ciebie."
+    },
+    "ads": {
+        "title": "Sieć reklamowa",
+        "details": "Sieci reklamowe mogą generować przychody ze sprzedaży powierzchni reklamowej na stronie."
+    },
+    "analytic": {
+        "title": "Pomiar oglądalności",
+        "details": "Usługi pomiaru oglądalności wykorzystywane są do generowania przydatnych statystyk potrzebnych w doskonaleniu strony."
+    },
+    "social": {
+        "title": "Portale społecznościowe",
+        "details": "Sieci społecznościowe mogą poprawić użyteczność serwisu i pomóc w promocji za pośrednictwem udostępniania strony."
+    },
+    "video": {
+        "title": "Filmy",
+        "details": "Usługa udostępniania wideo pomoże dodać multimedia do strony i zwiększyć jej ogladalność."
+    },
+    "comment": {
+        "title": "Komentarze",
+        "details": "Zarządzanie komentarzami ułatwia komentowanie i zwalcza spam."
+    },
+    "support": {
+        "title": "Pomoc",
+        "details": "Usługa pomocy technicznej pozwala skontaktować się z administratorem witryny i pomaga ją udoskonalić."
+    },
+    "api": {
+        "title": "Wydajne pliki cookie",
+        "details": "Wydajne pliki cookie zbierają zagregowane informacje o sposobie korzystania z naszej strony internetowej. Ma to na celu zwiększenie jego atrakcyjności, zawartości i funkcjonalności. Te pliki cookie pomagają nam ustalić, czy, jak często i przez jaki czas odwiedzane są poszczególne podstrony naszej strony internetowej i których treści użytkownicy są szczególnie zainteresowani. Wyszukiwane hasła, kraj, region i (w stosownych przypadkach) miasto, z którego strona internetowa jest uzyskiwane są również zapisy, podobnie jak odsetek urządzeń mobilnych używanych do uzyskania dostępu do strony internetowej. Używamy tych informacji do tworzenia raportów statystycznych, które pomagają nam dostosować zawartość naszej witryny do twoich potrzeb i zoptymalizować naszą ofertę."
+    },
+    "other": {
+        "title": "Inne",
+        "details": "Usługi do wyświetlania treści internetowych."
+    }
+}

@@ -1,0 +1,77 @@
+
+.cookiesjsr-banner {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 1rem;
+  background-color: var(--banner-bg-color, $banner-bg-color);
+  color: var(--ci-light, $ci-light);
+  font-size: 1rem;
+  max-height: calc(100vh - #{$banner-logo-offset});
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform .3s ease-in-out;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  a {
+    color: var(--ci-light, $ci-light);
+  }
+
+  &--info,
+  &--action {
+    width: 100%;
+    @media (min-width: $md) {
+      width: 50%;
+    }
+  }
+
+  &--info {
+    padding: 0 var(--default-margin, $default-margin);
+    margin-bottom: var(--default-margin, $default-margin);
+    max-height: calc(100vh - 100px - #{$default-margin*2});
+    overflow: auto;
+  }
+
+  &--links {
+    margin: .5rem 0 0;
+    font-size: .85em;
+  }
+
+  &--action {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @media (min-width: $xs) {
+      flex-direction: row;
+    }
+
+  }
+
+  button {
+    &.denyAll {
+      display: none;
+
+      @media (min-width: $xl) {
+        display: inline-block;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,68 @@
+{
+  "config": {
+    "cookie": {
+      "name": "gdpr",
+      "expires": 31536000000,
+      "sameSite": "Lax",
+      "secure": false
+    },
+    "callback": {
+      "method": "get",
+      "url": "/cookiesjsr/callback.json",
+      "headers": {}
+    },
+    "interface": {
+      "openSettingsHash": "#editCookieSettings",
+      "showDenyAll": true,
+      "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
+      "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
+      "defaultLang": "en"
+    }
+  },
+  "services": {
+    "default": {
+      "id": "default",
+      "services": []
+    },
+    "analytic": {
+      "id": "analytic",
+      "services": [{
+        "key": "gtag",
+        "type": "analytic",
+        "name": "Google Analytics (gtag.js)",
+        "uri": "https://support.google.com/analytics/answer/6004245",
+        "needConsent": true
+      },
+      {
+        "key": "analytics",
+        "type": "analytic",
+        "name": "Google Analytics (universal)",
+        "uri": "https://support.google.com/analytics/answer/6004245",
+        "needConsent": true
+        }
+      ]
+    },
+    "social": {
+      "id": "social",
+      "services": [
+        {
+          "key": "facebook",
+          "type": "social",
+          "name": "Facebook",
+          "uri": "https://www.facebook.com/policies/cookies/",
+          "needConsent": true
+        }
+      ]
+    },
+    "video": {
+      "id": "video",
+      "services": [{
+        "key": "youtube",
+        "type": "video",
+        "name": "YouTube",
+        "uri": "https://policies.google.com/privacy",
+        "needConsent": true
+      }]
+    }
+  }
+}

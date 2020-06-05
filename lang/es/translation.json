@@ -1,0 +1,57 @@
+{
+    "bannerText": "Las cookies son pequeños archivos de texto que su navegador coloca en su dispositivo para almacenar cierta información. Usando la información que se almacena y devuelve, un sitio web puede reconocer que ha accedido y visitado previamente utilizando el navegador en su dispositivo final. Utilizamos esta información para organizar y mostrar el sitio web de manera óptima de acuerdo con sus preferencias. Dentro de este proceso, solo se identifica la cookie en su dispositivo. Los datos personales solo se almacenan después de su consentimiento expreso o cuando sea absolutamente necesario para permitir el uso del servicio proporcionado por nosotros y al que usted accede.",
+    "settings": "Gestionar servicios",
+    "acceptAll": "Aceptar todo",
+    "close": "Cerrar",
+    "settingsAllServices": "Ajustes para todos los servicios",
+    "allowed": "permitida",
+    "denied": "negada",
+    "readMore": "Leer más",
+    "officialWebsite": "Ver sitio web oficial",
+    "cookieSettings": "Configuraciones de cookies",
+    "allowAll": "Permitir todo",
+    "denyAll": "Negar todo",
+    "saveSettings": "Guardar ajustes",
+    "privacyPolicy": "Política de privacidad",
+    "imprint": "Imprimir",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "credit": "",
+
+    "default": {
+        "title": "¿Qué son las cookies?",
+        "details": "Las cookies son pequeños archivos de texto que su navegador coloca en su dispositivo para almacenar cierta información. Al usar la información que se almacena y se devuelve, un sitio web puede reconocer que usted ha accedido y visitado previamente usando el navegador en su dispositivo final. Utilizamos esta información para organizar y mostrar el sitio web de manera óptima de acuerdo con sus preferencias. Dentro de este proceso, solo se identifica la cookie en su dispositivo. Los datos personales solo se almacenan después de su consentimiento expreso o cuando esto es absolutamente necesario para permitir el uso del servicio proporcionado por nosotros y al que usted accede."
+    },
+    "ads": {
+        "title": "Red publicitaria",
+        "details": "Las redes publicitarias pueden generar ingresos vendiendo espacios publicitarios en el sitio."
+    },
+    "analytic": {
+        "title": "Cookies de marketing",
+        "details": "Las cookies de marketing provienen de compañías de publicidad externas (\" cookies de terceros \") y se utilizan para recopilar información sobre los sitios web visitados por el usuario. El propósito de esto es crear y mostrar contenido orientado al grupo objetivo y publicidad para el usuario."
+    },
+    "social": {
+        "title": "Redes sociales",
+        "details": "Las redes sociales pueden mejorar la usabilidad del sitio y ayudar a promoverlo a través de los recursos compartidos."
+    },
+    "video": {
+        "title": "Videos",
+        "details": "Los servicios para compartir videos ayudan a agregar medios enriquecidos en el sitio y aumentar su visibilidad."
+    },
+    "comment": {
+        "title": "Comentarios",
+        "details": "Los administradores de comentarios facilitan la presentación de comentarios y la lucha contra el spam."
+    },
+    "support": {
+        "title": "Soporte",
+        "details": "Los servicios de soporte le permiten ponerse en contacto con el equipo del sitio y ayudarlo a mejorarlo."
+    },
+    "api": {
+        "title": "Cookies de rendimiento",
+        "details": "Las cookies de rendimiento recopilan información agregada sobre cómo se utiliza nuestro sitio web. El propósito de esto es mejorar su atractivo, contenido y funcionalidad. Estas cookies nos ayudan a determinar si, con qué frecuencia y por cuánto tiempo subpáginas particulares de se accede a nuestro sitio web y qué usuarios de contenido están particularmente interesados. También se registran los términos de búsqueda, el país, la región y (cuando corresponda) la ciudad desde la que se accede al sitio web, así como la proporción de dispositivos móviles que se utilizan para acceder al sitio web \"Utilizamos esta información para compilar informes estadísticos que nos ayudan a adaptar el contenido de nuestro sitio web a sus necesidades y optimizar nuestra oferta."
+    },
+    "other": {
+        "title": "Otro",
+        "details": "Servicios para mostrar contenido web."
+    }
+}
