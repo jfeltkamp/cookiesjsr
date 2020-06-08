@@ -1,10 +1,15 @@
 # Cookies JSR
 
-Easy plug-able cookie consent management tool. 
+Easy plug-able cookie consent management tool built with React. 
 
 * Allows GDPR conform cookie consent management.
+* Allows easy integration of new 3rd-party services.
 * Supports translation.
 * Allows custom styling. 
+
+This tool does not contain any services that involve external resources, such as Analytics or Youtube. 
+It is an easily configurable framework, with which it is possible to obtain the user's consent to the use of cookies, 
+to save his decisions (also in a cookie) and provides an event as entry point for dispatching own services.
 
 ## Install
 
@@ -32,7 +37,7 @@ Easy plug-able cookie consent management tool.
 ``` 
 
 ### Example ```cookiejsr-config.json```
-(Docs below)
+([Documentation](#docs-config))
 ```json
 {
   "config": {
@@ -73,6 +78,64 @@ Easy plug-able cookie consent management tool.
   }
 }
 ```
+
+### Example ```cookiejsr-init.js```
+
+This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
+can find its config file.
+
+But you can also dispatch your consent dependent services inside of this file.
+
+````js
+// Base configuration 
+document.cookiesjsr = {
+  apiUrl: '',
+  serviceQuery: '/path/to/your/cookiejsr-config.json'
+}
+
+var dispatcher = {
+  matomo: {
+    activate: function() {
+      // Do stuff to enable Matomo.
+    },
+    fallback: function() {
+      // Do stuff to fallback. E.g. display layer where the benefits are explained,
+      // when Matomo is enabled.
+    }
+  },
+  analytics: {
+    activate: function() {
+      // Do stuff to enable Google Analytics.
+    },
+    fallback: function() {
+      // Do stuff to fallback. E.g. display layer where the benefits are explained,
+      // when Google Analytics is enabled.
+    }
+  }
+}
+
+/**
+ * Entry to your custom code:
+ * Catch the Event 'cookieConsent' that comes with an object services inside the
+ * event object called with event.detail.services. It contains the current user decisions.
+ *
+ * This event is fired when DOM is loaded or user updates his settings. 
+ */
+document.addEventListener('cookieConsent', function(event) {
+  var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
+  for (var sid in services) {
+    if(typeof dispatcher[sid] === 'object') {
+      if(services[sid] === true && typeof dispatcher[sid].activate === 'function') {
+        dispatcher[sid].activate();
+      } else if(typeof dispatcher[sid].fallback === 'function') {
+        dispatcher[sid].fallback();
+      }
+    }
+  }
+});
+
+````
+### <a name="docs-config"></a> Documentation ```cookiejsr-config.json```
 
 In the config file are two objects expected: ```config``` and ```services```.
 #### The config object
@@ -121,7 +184,7 @@ The ```services``` object is a simple homogeneous structure of multiple service 
     "services": {
       "group_1": {
         "id": "group_1",
-        "services": [{...service_1}, {...service_2}, ... ]
+        "services": [{"...service_1"}, {"...service_2"}, {"..."} ]
       },
       "group_2": {
         ...
@@ -139,62 +202,13 @@ Each contained service in a group has 5 properties:
 | uri          | string       | URL for the ext. documentation of the resource.  |
 | needConsent  | string       | If service needs users consent or not (required cookies) |
 
-### Example ```cookiejsr-init.js```
-
-````js
-document.cookiesjsr = {
-  apiUrl: '',
-  serviceQuery: '/path/to/your/cookiejsr-config.json',
-  activeGroup: 'default'
-}
-
-var dispatcher = {
-  matomo: {
-    activate: function() {
-      // Do stuff to enable Matomo.
-    },
-    fallback: function() {
-      // Do stuff to fallback. E.g. display layer where the benefits are explained,
-      // when Matomo is enabled.
-    }
-  },
-  analytics: {
-    activate: function() {
-      // Do stuff to enable Google Analytics.
-    },
-    fallback: function() {
-      // Do stuff to fallback. E.g. display layer where the benefits are explained,
-      // when Matomo is enabled.
-    }
-  }
-}
-
-/**
- * Entry to your custom code:
- * Catch the Event 'cookieConsent' that comes with an object services inside the
- * event object called with event.detail.services. It containes the current user decisions.
- * This event is fired when DOM is loaded or user updates his settings. 
- */
-document.addEventListener('cookieConsent', function(event) {
-  var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
-  for (var sid in services) {
-    if(typeof dispatcher[sid] === 'object') {
-      if(services[sid] === true && typeof dispatcher[sid].activate === 'function') {
-        dispatcher[sid].activate();
-      } else if(typeof dispatcher[sid].fallback === 'function') {
-        dispatcher[sid].fallback();
-      }
-    }
-  }
-});
-
-````
-
 ## Styling
 
-If you just want to customize colors use css vars.
+If you just want to customize colors use css vars. Copy the following code to your css and play with the values.
 
-Copy the following code to your css and play with the values.
+You shouldn't have any trouble overwriting the css. The CSS is plain BEM-style and there are no "!importants" or 
+inline-styles.
+
 
 ```html
 <style>
@@ -237,4 +251,10 @@ Copy the following code to your css and play with the values.
 </style>
 ```
 
-kjhsdfkjh
+
+### Rewrite CSS
+
+The original .scss files are in the repo. If you want to do a full CSS rewrite, this might be a good starting point.
+In that case, you can simply do without integrating the original CSS.
+
+The MarkUp is fixed because the JS is a rendered React-App. You can't change anything here.
