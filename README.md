@@ -116,12 +116,12 @@ var dispatcher = {
 
 /**
  * Entry to your custom code:
- * Catch the Event 'cookieConsent' that comes with an object services inside the
+ * Catch the Event 'cookiesjsrUserConsent' that comes with an object services inside the
  * event object called with event.detail.services. It contains the current user decisions.
  *
  * This event is fired when DOM is loaded or user updates his settings. 
  */
-document.addEventListener('cookieConsent', function(event) {
+document.addEventListener('cookiesjsrUserConsent', function(event) {
   var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
   for (var sid in services) {
     if(typeof dispatcher[sid] === 'object') {
@@ -151,7 +151,7 @@ data to the backend.
 4. ```translation```: <a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file. 
 In this case, the path to the config file must contain a placeholder for the language ID (% lang_id).
 
-| parent | child        | type                                             |
+| parent | children     | type                                             |
 |--------|--------------|--------------------------------------------------|
 | config |              | object                                           |
 |        | cookie       | object \(keys: name, expires, sameSite, secure\) |
@@ -159,7 +159,7 @@ In this case, the path to the config file must contain a placeholder for the lan
 |        | interface    | object \(keys: openSettingsHash, \.\.\.\)        |
 
 ##### Details
-| parent       | child            | type: description                                |
+| parent       | children         | type: description                                |
 |--------------|------------------|--------------------------------------------------|
 | cookie       |                  |                                                  |
 |              | name             | string: the cookie name                          |
