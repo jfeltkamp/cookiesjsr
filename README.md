@@ -250,7 +250,7 @@ inline-styles.
     --btn-border-color: #FFF;
     --btn-bg-color: #004c93;
     
-    --banner-logo-offset: 100px; // Mobile layout keeps space free to not overlap your logo.
+    --banner-logo-offset: 100px; /* Mobile layout keeps space free to not overlap your logo. */
     --banner-bg-color: #004c93;
     --banner-font-color: #FFF;
     --banner-link-font-color: #FFF;
