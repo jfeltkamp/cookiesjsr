@@ -82,7 +82,7 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 ### Example ```cookiejsr-init.js```
 
 This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
-can find its config file.
+can find their config file. [Documentation](#base-config)
 
 But you can also dispatch your consent dependent services inside of this file.
 
@@ -90,7 +90,7 @@ But you can also dispatch your consent dependent services inside of this file.
 // Base configuration 
 document.cookiesjsr = {
   apiUrl: '',
-  serviceQuery: '/path/to/your/cookiejsr-config.json'
+  configQuery: '/path/to/your/cookiejsr-config.json'
 }
 
 var dispatcher = {
@@ -144,34 +144,38 @@ In ```config``` you define some options about the
    - where to find the translation,
    - how to display the cookie consent widget.
    - ... and more
-2. ```cookie```: The users decisions what cookies will be allowed or not, are saved in another 'required' cookie. Here you define the properties for this single cookie. 
-3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these data to the backend.
+2. ```cookie```: The users decisions what cookies will be allowed or not, are saved in another 'required' cookie. Here 
+you define the properties for this single cookie. 
+3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these 
+data to the backend.
+4. ```translation```: <a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file. 
+In this case, the path to the config file must contain a placeholder for the language ID (% lang_id).
 
 | parent | child        | type                                             |
 |--------|--------------|--------------------------------------------------|
 | config |              | object                                           |
-|        | a. cookie    | object \(keys: name, expires, sameSite, secure\) |
-|        | b. callback  | object \(keys: method, url, headers\)            |
-|        | c. interface | object \(keys: openSettingsHash, \.\.\.\)        |
+|        | cookie       | object \(keys: name, expires, sameSite, secure\) |
+|        | callback     | object \(keys: method, url, headers\)            |
+|        | interface    | object \(keys: openSettingsHash, \.\.\.\)        |
 
 ##### Details
-| parent       | child        | type: description                                |
-|--------------|--------------|--------------------------------------------------|
-| a. cookie    |              |                                                  |
-|              | name         | string: the cookie name                          |
-|              | expires      | integer: (optional) time (ms) cookie is valid.   |
-|              | domain       | string: (optional) domain cookie is valid for.   |
-|              | path         | string: (optional) path cookie is valid for.     |
-|              | secure       | boolean: (optional, default: false)              |
-|              | sameSite     | string: (optional, None/Lax/Strict, default: Lax)|
-| b. callback  |              |                                                  |
-|              | url          | string: (optional) the callback url              |
-|              | method       | string: (optional, get/post, default: get)       |
-|              | headers      | object: (optional), key-value pairs              |
-| c. interface |              |                                                  |
+| parent       | child            | type: description                                |
+|--------------|------------------|--------------------------------------------------|
+| cookie       |                  |                                                  |
+|              | name             | string: the cookie name                          |
+|              | expires          | integer: (optional) time (ms) cookie is valid.   |
+|              | domain           | string: (optional) domain cookie is valid for.   |
+|              | path             | string: (optional) path cookie is valid for.     |
+|              | secure           | boolean: (optional, default: false)              |
+|              | sameSite         | string: (optional, None/Lax/Strict, default: Lax)|
+| callback     |                  |                                                  |
+|              | url              | string: (optional) the callback url              |
+|              | method           | string: (optional, get/post, default: get)       |
+|              | headers          | object: (optional), key-value pairs              |
+| interface    |                  |                                                  |
 |              | openSettingsHash | string: (optional, default: cookiesjsr) The location.hash value to open the cookie settings dialog. |
 |              | showDenyAll      | boolean (optional, default: true) Add "deny all" button to dialog that makes all cookies forbidden. |
-|              | translationQuery | string (path/url) the absolute path or url where translation data can be load. ("%lang_id" is placeholder for language ID ISO 639-1 e.g. "en" |
+|              | translationQuery | string (optional, path/url) the absolute path or url where translation data can be load. ("%lang_id" is placeholder for language ID ISO 639-1 e.g. "en". This option you can use, when you use static translation files. You can also [add the translation to your config-file](#translation-config). |
 |              | availableLangs   | array(string(2)): language IDs ISO 639-1 e.g. ["en", "de"] |
 |              | defaultLang      | string(2): (optional, default: en) Fallback language, if requested language not available |
 
@@ -184,11 +188,11 @@ The ```services``` object is a simple homogeneous structure of multiple service 
     "services": {
       "group_1": {
         "id": "group_1",
-        "services": [{"...service_1"}, {"...service_2"}, {"..."} ]
+        "services": [{"service_1": "..."}, {"service_2": "..."}, {"...": "..."} ]
       },
       "group_2": {
-        ...
-      },
+        "...": "..."
+      }
     }
 }
 ```
@@ -201,6 +205,28 @@ Each contained service in a group has 5 properties:
 | name         | string       | Display name shown in the dialog widget          |
 | uri          | string       | URL for the ext. documentation of the resource.  |
 | needConsent  | string       | If service needs users consent or not (required cookies) |
+
+
+## <a name="#base-config"></a>Base Config
+
+````js
+// Base configuration 
+document.cookiesjsr = {
+  apiUrl: '',
+  configQuery: '/path/to/your/cookiejsr-config.json'
+}
+````
+The base config tells the library where to find the config. If the config is load from an other domain, you must give
+an apiUrl (leave empty if not).
+
+```apiUrl```: (optional, e.g. 'https://hi-api.io/path') The base URL where your API can be reached. Leave empty if your
+website has same origin. No pending slash. 
+
+```configQuery```: (required) Path to your config-file (cookiesjsr-config.json). 
+If your config-file contains the translation data, the path must include a param "%lang_id" for the language id.
+````js
+'/path/to/%lang_id/cookiejsr-config.json'
+````
 
 ## Styling
 
