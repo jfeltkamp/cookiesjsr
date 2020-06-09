@@ -13,8 +13,8 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 
 ## Install
 
-1. Create your ```cookiejsr-config.json``` file where you define your groups and services.
-2. Create your ```cookiejsr-init.js``` file where you initialize the services.
+1. Create your ```cookiesjsr-config.json``` file where you define your groups and services.
+2. Create your ```cookiesjsr-init.js``` file where you initialize the services.
 3. Place the following HTML before the closing body-tag.
 
 ... and you are done.
@@ -23,20 +23,20 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 <html lang="de">
 <head>
   ...
-  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiejsr@0/dist/cookiejsr.min.css">
+  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@0/dist/cookiesjsr.min.css">
 </head>
 <body>
   ...
 
   <!-- The Place where cookiesjsr can live in. -->
   <div id="cookiesjsr"></div> 
-  <script src="/path/to/your/cookiejsr-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiejsr@0/dist/cookiejsr.min.js"></script>
+  <script src="/path/to/your/cookiesjsr-init.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@0/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
 ``` 
 
-### Example ```cookiejsr-config.json```
+### Example ```cookiesjsr-config.json```
 ([Documentation](#docs-config))
 ```json
 {
@@ -79,7 +79,7 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 }
 ```
 
-### Example ```cookiejsr-init.js```
+### Example ```cookiesjsr-init.js```
 
 This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
 can find their config file. [Documentation](#base-config)
@@ -90,7 +90,7 @@ But you can also dispatch your consent dependent services inside of this file.
 // Base configuration 
 document.cookiesjsr = {
   apiUrl: '',
-  configQuery: '/path/to/your/cookiejsr-config.json'
+  configQuery: '/path/to/your/cookiesjsr-config.json'
 }
 
 var dispatcher = {
@@ -135,7 +135,7 @@ document.addEventListener('cookiesjsrUserConsent', function(event) {
 });
 
 ````
-### <a name="docs-config"></a> Documentation ```cookiejsr-config.json```
+### <a name="docs-config"></a> Documentation ```cookiesjsr-config.json```
 
 In the config file are two objects expected: ```config``` and ```services```.
 #### The config object
@@ -213,7 +213,7 @@ Each contained service in a group has 5 properties:
 // Base configuration 
 document.cookiesjsr = {
   apiUrl: '',
-  configQuery: '/path/to/your/cookiejsr-config.json'
+  configQuery: '/path/to/your/cookiesjsr-config.json'
 }
 ````
 The base config tells the library where to find the config. If the config is load from an other domain, you must give
@@ -225,7 +225,7 @@ website has same origin. No pending slash.
 ```configQuery```: (required) Path to your config-file (cookiesjsr-config.json). 
 If your config-file contains the translation data, the path must include a param "%lang_id" for the language id.
 ````js
-'/path/to/%lang_id/cookiejsr-config.json'
+'/path/to/%lang_id/cookiesjsr-config.json'
 ````
 
 ## Styling
