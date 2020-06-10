@@ -139,7 +139,7 @@ document.addEventListener('cookiesjsrUserConsent', function(event) {
 ````
 ### <a name="docs-config"></a> Documentation ```cookiesjsr-config.json```
 
-In the config file are two objects expected: ```config``` and ```services```.
+In the config file are two objects expected: ```config```, ```services``` and optinal ```translation```.
 #### The config object
 In ```config``` you define some options about the 
 1. ```interface```: Some common option about 
@@ -150,15 +150,15 @@ In ```config``` you define some options about the
 you define the properties for this single cookie. 
 3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these 
 data to the backend.
-4. ```translation```: <a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file. 
-In this case, the path to the config file must contain a placeholder for the language ID (% lang_id).
 
-| parent | children     | type                                             |
-|--------|--------------|--------------------------------------------------|
-| config |              | object                                           |
-|        | cookie       | object \(keys: name, expires, sameSite, secure\) |
-|        | callback     | object \(keys: method, url, headers\)            |
-|        | interface    | object \(keys: openSettingsHash, \.\.\.\)        |
+| parent      | children     | type                                                    |
+|-------------|--------------|---------------------------------------------------------|
+| config      |              | object                                                  |
+|             | cookie       | object \(keys: name, expires, sameSite, secure\)        |
+|             | callback     | object \(keys: method, url, headers\)                   |
+|             | interface    | object \(keys: openSettingsHash, \.\.\.\)               |
+| services    |              | object ([see docs here](#services-object))              |
+| translation |              | object, optional ([see docs here](#translation-object)) |
 
 ##### Details
 | parent       | children         | type: description                                |
@@ -181,7 +181,7 @@ In this case, the path to the config file must contain a placeholder for the lan
 |              | availableLangs   | array(string(2)): language IDs ISO 639-1 e.g. ["en", "de"] |
 |              | defaultLang      | string(2): (optional, default: en) Fallback language, if requested language not available |
 
-#### The services object
+#### <a name="services-object"></a> The services object
 
 The ```services``` object is a simple homogeneous structure of multiple service groups containing the services that users have to accept or deny. 
 
@@ -208,6 +208,30 @@ Each contained service in a group has 5 properties:
 | uri          | string       | URL for the ext. documentation of the resource.  |
 | needConsent  | string       | If service needs users consent or not (required cookies) |
 
+
+#### <a name="translation-object"></a> The ```translation``` object
+
+The content of this object is just the same as the [content of a translation file](./lang/en/translation.json).
+
+<a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file. 
+In this case, the path to the config file must contain a placeholder for the language ID (% lang_id).
+
+However, you have to decide how you want to load the translation. A good option is to load static files as they are 
+offered here in the Git repo. In this case, simply adjust the path where the files are stored at 
+```config.interface.translationQuery```.
+ 
+If the translations are to be maintained via a CMS or similar, it can be advantageous to deliver the translation with 
+the configuration, because otherwise two API calls will be executed in succession, which can delay the display of the 
+app. To achieve that the config delivers the correct translation you will have to provide a translation parameter in the 
+configQuery route (see paragraph below).
+
+### How the language is determined?
+`````html
+<html lang="de">
+`````
+
+By the way: The app determines the language based on the lang parameter in the HTML tag. If no parameter is available, 
+the default language of the browser is determining.
 
 ## <a name="base-config"></a>Base Config
 Content of your ```cookiesjsr-init.js```:
