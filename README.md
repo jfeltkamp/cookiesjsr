@@ -3,6 +3,7 @@
 Easy plug-able cookie consent management tool built with React. 
 
 * Allows GDPR conform cookie consent management.
+* Allows grouped and individual consent.
 * Allows easy integration of new 3rd-party services.
 * Supports translation.
 * Allows custom styling. 
@@ -82,9 +83,10 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 ### Example ```cookiesjsr-init.js```
 
 This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
-can find their config file. [Documentation](#base-config)
+can find their config file. ([Documentation](#base-config))
 
-But you can also dispatch your consent dependent services inside of this file.
+<a name="#manage-event"></a>But you can also dispatch your consent dependent services inside of this file. 
+([Further best practivces](#service-activation))
 
 ````js
 // Base configuration 
@@ -96,7 +98,7 @@ document.cookiesjsr = {
 var dispatcher = {
   matomo: {
     activate: function() {
-      // Do stuff to enable Matomo.
+      // Do stuff to enable Matomo. See best practices below.
     },
     fallback: function() {
       // Do stuff to fallback. E.g. display layer where the benefits are explained,
@@ -105,7 +107,7 @@ var dispatcher = {
   },
   analytics: {
     activate: function() {
-      // Do stuff to enable Google Analytics.
+      // Do stuff to enable Google Analytics. See best practices below.
     },
     fallback: function() {
       // Do stuff to fallback. E.g. display layer where the benefits are explained,
@@ -119,7 +121,7 @@ var dispatcher = {
  * Catch the Event 'cookiesjsrUserConsent' that comes with an object services inside the
  * event object called with event.detail.services. It contains the current user decisions.
  *
- * This event is fired when DOM is loaded or user updates his settings. 
+ * This event is fired when DOM is loaded or user updates his settings.
  */
 document.addEventListener('cookiesjsrUserConsent', function(event) {
   var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
@@ -208,7 +210,7 @@ Each contained service in a group has 5 properties:
 
 
 ## <a name="#base-config"></a>Base Config
-
+Content of your ```cookiesjsr-init.js```:
 ````js
 // Base configuration 
 document.cookiesjsr = {
@@ -226,6 +228,62 @@ website has same origin. No pending slash.
 If your config-file contains the translation data, the path must include a param "%lang_id" for the language id.
 ````js
 '/path/to/%lang_id/cookiesjsr-config.json'
+````
+
+## <a name="#service-activation"></a>Processing consent, activation of 3rd-party services
+
+In the [code example above](#manage-event) you see how to catch the event and distribute the users consents to the 
+individual service activation. Here we want to have a look on how to handle the 3rd-party service activation. The
+content of the functions provided in the dispatcher event (activate and fallback). 
+
+In order to effectively suppress 3rd party cookies, the resources must already be switched off in the supplied source 
+code. I.e. that corresponding script tags or iframes (these are the most common use cases) have to be manipulated so 
+that they do not work. => We have to find a reversible knock-out technique.
+
+What the ```activate()``` function has to do is to reanimate the service.
+
+What the ```fallback()``` function has to do is to repair gaps in the layout, inform user, that something is missing, or
+ask again if he now wants to activate the service.
+
+### Reversible knock-outs for ```<script>``` and ```<iframe>```
+`````html
+<!-- before -->
+<script src="https://ext-service.net/js/install_many_cookies.js"></script>
+<!-- after (knocked out javascript) -->
+<script src="https://ext-service.net/js/install_many_cookies.js" data-sid="extservice" type="text/plain"></script>
+
+<!-- before -->
+<iframe src="https://www.youtube.com/embed/XGT82nnmF4c" width="560" height="315"></iframe>
+<!-- after (knocked out iframe) -->
+<iframe src="/path/to/myIframeFallback.html" data-sid="youtube" data-src="https://www.youtube.com/embed/XGT82nnmF4c" width="560" height="315"></iframe>
+`````
+
+### Re-animation of knocked out services
+
+````js
+var dispatch = {
+  extservice: {
+    activate: function() {
+      jQuery('script[data-sid="extservice"]').each(function() {
+        var replacement = jQuery(this).clone().removeAttr('type');
+        jQuery(this).replaceWith(replacement.html());
+      });
+    },
+    fallback: function() {
+      // No need.
+    }
+  },
+  youtube: {
+    activate: function() {
+      jQuery('iframe[data-sid="youtube"]').each(function() {
+        jQuery(this).attr('src', jQuery(this).data('src'));
+      });
+    },
+    fallback: function() {
+      jQuery('iframe[data-sid="youtube"]').parent().prepend(jQuery('<div>Sorry, but YouTube disabled.</div>'))
+    }
+  }
+}
 ````
 
 ## Styling
