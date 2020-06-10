@@ -85,7 +85,7 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
 can find their config file. ([Documentation](#base-config))
 
-<a name="#manage-event"></a>But you can also dispatch your consent dependent services inside of this file. 
+<a name="manage-event"></a> But you can also dispatch your consent dependent services inside of this file. 
 ([Further best practivces](#service-activation))
 
 ````js
@@ -209,7 +209,7 @@ Each contained service in a group has 5 properties:
 | needConsent  | string       | If service needs users consent or not (required cookies) |
 
 
-## <a name="#base-config"></a>Base Config
+## <a name="base-config"></a>Base Config
 Content of your ```cookiesjsr-init.js```:
 ````js
 // Base configuration 
@@ -230,7 +230,7 @@ If your config-file contains the translation data, the path must include a param
 '/path/to/%lang_id/cookiesjsr-config.json'
 ````
 
-## <a name="#service-activation"></a>Processing consent, activation of 3rd-party services
+## <a name="service-activation"></a>Processing consent, activation of 3rd-party services
 
 In the [code example above](#manage-event) you see how to catch the event and distribute the users consents to the 
 individual service activation. Here we want to have a look on how to handle the 3rd-party service activation. The
