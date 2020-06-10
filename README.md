@@ -225,6 +225,8 @@ the configuration, because otherwise two API calls will be executed in successio
 app. To achieve that the config delivers the correct translation you will have to provide a translation parameter in the 
 configQuery route (see paragraph below).
 
+However, IF a translation object is included in the config, the translationQuery will not be invoked.
+
 ### How the language is determined?
 `````html
 <html lang="de">
