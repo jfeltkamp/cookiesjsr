@@ -62,23 +62,27 @@
     }
   },
   "translation": {
-    "bannerText": "We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose \u0022ACCEPT ALL\u0022, you consent to the use of all cookies. You can accept and reject individual cookie types and  revoke your consent for the future at any time under \u0022Settings\u0022.",
-    "privacyPolicy": "Privacy policy",
-    "privacyUri": "\/node\/1",
-    "imprint": "Imprint",
-    "imprintUri": "\/node\/2",
-    "denyAll": "Deny all",
+    "bannerText": "We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose \"ACCEPT COOKIES\", you consent to the use of all cookies. You can accept and reject individual cookie types and  revoke your consent for the future at any time under \"Cookie settings\".",
     "settings": "Settings",
     "acceptAll": "Accept all",
-    "cookieSettings": "Cookie settings",
-    "close": "Close dialog",
+    "close": "Close",
+    "settingsAllServices": "Settings for all services",
     "allowed": "allowed",
     "denied": "denied",
     "readMore": "Read more",
-    "officialWebsite": "Official website",
-    "settingsAllServices": "Settings for all services",
-    "saveSettings": "Save alll",
+    "officialWebsite": "View the official website",
+    "cookieSettings": "Cookie settings",
+    "allowAll": "Accept all",
+    "denyAll": "Deny all",
+    "saveSettings": "Save",
+    "privacyPolicy": "Privacy policy",
+    "imprint": "Imprint",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "cookieDocs": "Cookie Documentation",
+    "cookieDocsUri": "/cookie-documentation",
     "credit": "",
+
     "default": {
       "title": "Required Cookies",
       "details": "Required cookies allow the basic service of this website an can not be disabled."
@@ -95,16 +99,5 @@
       "title": "Video",
       "details": "Video sharing services help to add rich media on the site and increase its visibility."
     }
-  },
-  "#cache": {
-    "contexts": [
-      "url"
-    ],
-    "tags": [
-      "config:cookies.config",
-      "config:cookies.texts",
-      "config:cookies.cookies_service",
-      "config:cookies.cookies_service_group"
-    ]
   }
 }

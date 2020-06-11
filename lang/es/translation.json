@@ -16,6 +16,8 @@
     "imprint": "Imprimir",
     "imprintUri": "/imprint",
     "privacyUri": "/privacy",
+    "cookieDocs": "Documentación de cookies",
+    "cookieDocsUri": "/cookie-documentation",
     "credit": "",
 
     "default": {

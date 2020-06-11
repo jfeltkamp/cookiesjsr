@@ -1,7 +1,7 @@
 {
   "config": {
     "cookie": {
-      "name": "gdpr",
+      "name": "cookiesjsr",
       "expires": 31536000000,
       "sameSite": "Lax",
       "secure": false
@@ -16,7 +16,8 @@
       "showDenyAll": true,
       "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
       "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
-      "defaultLang": "en"
+      "defaultLang": "en",
+      "groupConsent": true
     }
   },
   "services": {

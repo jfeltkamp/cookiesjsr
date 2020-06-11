@@ -16,6 +16,8 @@
     "imprint": "Afdruk",
     "imprintUri": "/imprint",
     "privacyUri": "/privacy",
+    "cookieDocs": "Cookie-documentatie",
+    "cookieDocsUri": "/cookie-documentation",
     "credit": "",
 
     "default": {

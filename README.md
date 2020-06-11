@@ -86,7 +86,7 @@ This file basically gives the base config to the JS library (see object: ```docu
 can find their config file. ([Documentation](#base-config))
 
 <a name="manage-event"></a> But you can also dispatch your consent dependent services inside of this file. 
-([Further best practivces](#service-activation))
+([Further best practices](#service-activation))
 
 ````js
 // Base configuration 
@@ -180,6 +180,7 @@ data to the backend.
 |              | translationQuery | string (optional, path/url) the absolute path or url where translation data can be load. ("%lang_id" is placeholder for language ID ISO 639-1 e.g. "en". This option you can use, when you use static translation files. You can also [add the translation to your config-file](#translation-config). |
 |              | availableLangs   | array(string(2)): language IDs ISO 639-1 e.g. ["en", "de"] |
 |              | defaultLang      | string(2): (optional, default: en) Fallback language, if requested language not available |
+|              | groupConsent     | boolean: (optional, default: false) The user can only en-/disable entire groups not individual services. Services are not shown in detail. |
 
 #### <a name="services-object"></a> The services object
 

@@ -16,6 +16,8 @@
     "imprint": "Odcisk",
     "imprintUri": "/imprint",
     "privacyUri": "/privacy",
+    "cookieDocs": "Dokumentacja cookie",
+    "cookieDocsUri": "/cookie-documentation",
     "credit": "",
 
     "default": {

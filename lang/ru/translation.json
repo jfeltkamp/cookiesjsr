@@ -16,6 +16,8 @@
     "imprint": "выходные данные",
     "imprintUri": "/imprint",
     "privacyUri": "/privacy",
+    "cookieDocs": "Документация куки",
+    "cookieDocsUri": "/cookie-documentation",
     "credit": "",
 
     "default": {

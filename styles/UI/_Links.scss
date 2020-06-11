@@ -1,0 +1,14 @@
+.cookiesjsr-links {
+  list-style: none;
+  margin: 0 -.75rem;
+  padding: 0;
+  display: flex;
+
+  &.links--row {
+    flex-direction: row;
+  }
+
+  li {
+    margin: 0 .75rem;
+  }
+}
