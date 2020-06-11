@@ -181,6 +181,7 @@ data to the backend.
 |              | availableLangs   | array(string(2)): language IDs ISO 639-1 e.g. ["en", "de"] |
 |              | defaultLang      | string(2): (optional, default: en) Fallback language, if requested language not available |
 |              | groupConsent     | boolean: (optional, default: false) The user can only en-/disable entire groups not individual services. Services are not shown in detail. |
+|              | cookieDocs       | boolean: (optional, default: false) Display links to cookie documentation where explicitly is described what 3rd-party services and cookies are used. This is required, if you use groupConsent. Link and link text are provided by translation. |
 
 #### <a name="services-object"></a> The services object
 

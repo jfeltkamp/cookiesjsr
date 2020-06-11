@@ -6,9 +6,28 @@
 
   &.links--row {
     flex-direction: row;
-  }
+    justify-content: left;
+    align-items: center;
 
-  li {
-    margin: 0 .75rem;
+    li {
+      margin: 0;
+      padding-left: .75rem;
+      padding-right: .75rem;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: .3em;
+        height: .3em;
+        background-color: var(--banner-font-color, #FFF);
+        transform: translate(-50%, -40%);
+      }
+      &:first-child:before {
+        content: none;
+      }
+    }
   }
 }
