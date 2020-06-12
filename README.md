@@ -314,6 +314,35 @@ var dispatch = {
 }
 ````
 
+## En-/disable Services from everywhere
+
+It is possible to activate third party services from anywhere on the website. It is not necessary to open the cookie 
+widget for this. It just has to be fired a Javascript event ```cookiesjsrSetService```.
+
+Suppose you have a link on the page that should be used to activate the Matomo service...
+
+````html
+<a href="#enable-matomo" id="cookiesjsr-enable-matomo">Enable matomo</a>
+````
+... your javascript could look like this.
+
+````js
+var element = document.getElementById('cookiesjsr-enable-matomo');
+element.addEventListener('click', function (e) {
+    e.preventDefault();
+    var options = { service: { matomo: true }};
+    document.dispatchEvent(new CustomEvent('cookiesjsrSetService', { detail: options }));
+});
+````
+As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data 
+object can have the following properties:
+
+| property | value | description |
+|----------|-------|-------------|
+| all      | boolean | En-/disables all 3rd-party services |
+| services | object | An object with key/value-pairs where the ```key``` is the id of a 3rd-parts service and ```value``` is a boolean if the service should be enabled (true) or disabled (false). |
+| groups   | object | An object with key/value-pairs where the ```key``` is the id of a entire group of services and ```value``` is a boolean if the services should be enabled (true) or disabled (false). |
+
 ## Styling
 
 If you just want to customize colors use css vars. Copy the following code to your css and play with the values.
