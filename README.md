@@ -314,7 +314,7 @@ var dispatch = {
 }
 ````
 
-## En-/disable Services from everywhere
+## En-/disable 3rd-party services from anywhere
 
 It is possible to activate third party services from anywhere on the website. It is not necessary to open the cookie 
 widget for this. It just has to be fired a Javascript event ```cookiesjsrSetService```.
@@ -335,13 +335,13 @@ element.addEventListener('click', function (e) {
 });
 ````
 As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data 
-object can have the following properties:
+object should have at least one of the following properties:
 
-| property | value | description |
-|----------|-------|-------------|
+| property | value   | description                         |
+|----------|---------|-------------------------------------|
 | all      | boolean | En-/disables all 3rd-party services |
-| services | object | An object with key/value-pairs where the ```key``` is the id of a 3rd-parts service and ```value``` is a boolean if the service should be enabled (true) or disabled (false). |
-| groups   | object | An object with key/value-pairs where the ```key``` is the id of a entire group of services and ```value``` is a boolean if the services should be enabled (true) or disabled (false). |
+| services | object  | An object with key/value-pairs where the ```key``` is the id of a 3rd-parts service and ```value``` is a boolean if the service should be enabled (true) or disabled (false). |
+| groups   | object  | An object with key/value-pairs where the ```key``` is the id of a entire group of services and ```value``` is a boolean if the services should be enabled (true) or disabled (false). |
 
 ## Styling
 
