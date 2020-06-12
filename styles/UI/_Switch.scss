@@ -35,4 +35,9 @@
       left: $switch-width - $switch-height;
     }
   }
+
+  input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+  }
 }

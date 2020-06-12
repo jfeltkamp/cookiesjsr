@@ -31,4 +31,16 @@
     padding: #{$default-margin/2} #{$default-margin};
     width: calc(#{$default-margin * 2} + #{$switch-width});
   }
+
+  &--always-on {
+    color: var(--switch-bg-on, $switch-bg-on);
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+    span {
+      background-color: var(--layer-font-light, $layer-font-light);
+      padding: 0 .5em;
+    }
+  }
 }
