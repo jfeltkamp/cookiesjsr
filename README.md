@@ -140,6 +140,7 @@ document.addEventListener('cookiesjsrUserConsent', function(event) {
 ### <a name="docs-config"></a> Documentation ```cookiesjsr-config.json```
 
 In the config file are two objects expected: ```config```, ```services``` and optinal ```translation```.
+
 #### The config object
 In ```config``` you define some options about the 
 1. ```interface```: Some common option about 
@@ -151,7 +152,7 @@ you define the properties for this single cookie.
 3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these 
 data to the backend.
 
-| parent      | children     | type                                                    |
+| Parent      | Children     | Type                                                    |
 |-------------|--------------|---------------------------------------------------------|
 | config      |              | object                                                  |
 |             | cookie       | object \(keys: name, expires, sameSite, secure\)        |
@@ -161,7 +162,7 @@ data to the backend.
 | translation |              | object, optional ([see docs here](#translation-object)) |
 
 ##### Details
-| parent       | children         | type: description                                |
+| Parent       | Children         | Type: Description                                |
 |--------------|------------------|--------------------------------------------------|
 | cookie       |                  |                                                  |
 |              | name             | string: the cookie name                          |
@@ -202,7 +203,7 @@ The ```services``` object is a simple homogeneous structure of multiple service 
 ```
 Each contained service in a group has 5 properties:
 
-| Property     | type         | description                                      |
+| Property     | Type         | Description                                      |
 |--------------|--------------|--------------------------------------------------|
 | key          | string (uid) | The unique Id of the service. e.g. "gtag"        |
 | type         | string       | Group the service belongs to.                    |
@@ -254,8 +255,8 @@ website has same origin. No pending slash.
 
 ```configQuery```: (required) Path to your config-file (cookiesjsr-config.json). 
 If your config-file contains the translation data, the path must include a param "%lang_id" for the language id.
-````js
-'/path/to/%lang_id/cookiesjsr-config.json'
+````
+configQuery: '/path/to/%lang_id/cookiesjsr-config.json'
 ````
 
 ## <a name="service-activation"></a>Processing consent, activation of 3rd-party services
@@ -330,14 +331,14 @@ Suppose you have a link on the page that should be used to activate the Matomo s
 var element = document.getElementById('cookiesjsr-enable-matomo');
 element.addEventListener('click', function (e) {
     e.preventDefault();
-    var options = { service: { matomo: true }};
+    var options = { services: { matomo: true }};
     document.dispatchEvent(new CustomEvent('cookiesjsrSetService', { detail: options }));
 });
 ````
 As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data 
 object should have at least one of the following properties:
 
-| property | value   | description                         |
+| Property | Value   | Description                         |
 |----------|---------|-------------------------------------|
 | all      | boolean | En-/disables all 3rd-party services |
 | services | object  | An object with key/value-pairs where the ```key``` is the id of a 3rd-parts service and ```value``` is a boolean if the service should be enabled (true) or disabled (false). |
@@ -391,7 +392,6 @@ inline-styles.
   }
 </style>
 ```
-
 
 ### Rewrite CSS
 
