@@ -7,6 +7,7 @@
     "allowed": "allowed",
     "denied": "denied",
     "readMore": "Read more",
+    "alwaysActive": "Always active",
     "officialWebsite": "View the official website",
     "cookieSettings": "Cookie settings",
     "allowAll": "Accept all",
@@ -33,12 +34,12 @@
         "details": "Marketing cookies come from external advertising companies (\"third-party cookies\") and are used to collect information about the websites visited by the user. The purpose of this is to create and display target group-oriented content and advertising for the user."
     },
     "social": {
-        "title": "Social networks",
-        "details": "Social networks can improve the usability of the site and help to promote it via the shares."
+        "title": "Social-Plugin Cookies",
+        "details": "Social networks can improve the usability of the site and increase its level of awareness. Social plugins are loaded from external platforms (such as Twitter, Facebook or Instagram) and displayed on this website. If you have an account with these providers and are logged in by cookie, you can access the functions of your account directly from this website."
     },
     "video": {
-        "title": "Videos",
-        "details": "Video sharing services help to add rich media on the site and increase its visibility."
+        "title": "Video-Sharing Cookies",
+        "details": "Video sharing services help add rich media to the website and increase its visibility. Videos are loaded from external platforms (such as Vimeo or YouTube) and displayed on this website. If you have an account with these providers and are logged in by cookie, you can access the functions of your account directly from this website."
     },
     "comment": {
         "title": "Comments",
