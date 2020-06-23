@@ -48,6 +48,10 @@
     overflow: auto;
   }
 
+  &--text {
+    display: block;
+  }
+
   &--links {
     margin-top: .5rem;
     font-size: .85em;

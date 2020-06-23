@@ -14,6 +14,7 @@
     "interface": {
       "openSettingsHash": "#editCookieSettings",
       "showDenyAll": true,
+      "settingsAsLink": false,
       "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
       "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
       "defaultLang": "en",
