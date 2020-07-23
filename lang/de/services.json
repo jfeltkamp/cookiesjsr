@@ -1,0 +1,131 @@
+{
+  "config": {
+    "cookie": {
+      "name": "cookiesjsr",
+      "expires": 31536000000,
+      "sameSite": "Lax",
+      "secure": false
+    },
+    "callback": {
+      "method": "get",
+      "url": "/cookiesjsr/callback.json",
+      "headers": {}
+    },
+    "interface": {
+      "openSettingsHash": "#editCookieSettings",
+      "showDenyAll": true,
+      "settingsAsLink": false,
+      "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
+      "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
+      "defaultLang": "en",
+      "groupConsent": true
+    }
+  },
+  "services": {
+    "default": {
+      "id": "default",
+      "services": []
+    },
+    "analytic": {
+      "id": "analytic",
+      "services": [{
+        "key": "gtag",
+        "type": "analytic",
+        "name": "Google Analytics (gtag.js)",
+        "uri": "https://support.google.com/analytics/answer/6004245",
+        "needConsent": true
+      },
+      {
+        "key": "analytics",
+        "type": "analytic",
+        "name": "Google Analytics (universal)",
+        "uri": "https://support.google.com/analytics/answer/6004245",
+        "needConsent": true
+        }
+      ]
+    },
+    "social": {
+      "id": "social",
+      "services": [
+        {
+          "key": "facebook",
+          "type": "social",
+          "name": "Facebook",
+          "uri": "https://www.facebook.com/policies/cookies/",
+          "needConsent": true
+        }
+      ]
+    },
+    "video": {
+      "id": "video",
+      "services": [{
+        "key": "youtube",
+        "type": "video",
+        "name": "YouTube",
+        "uri": "https://policies.google.com/privacy",
+        "needConsent": true
+      }]
+    }
+  },
+  "translation": {
+    "bannerText": "Wir verwenden auf unseren Webseiten eigene und fremde Cookies: Notwendige Cookies, die für die Nutzung unserer Webseiten zwingend erforderlich sind, funktionale Cookies, die Ihnen mehr Komfort bei der Nutzung unserer Webseiten bieten, Performance Cookies, mit denen wir aggregierte Daten zur Webseitennutzung und Statistiken generieren, sowie Marketing Cookies zum Anzeigen relevanter Inhalte und Werbung. Wenn Sie auf \"Akzeptieren\" klicken, stimmen Sie der Verwendung aller Cookies zu. Unter \"Einstellungen\" können Sie eine individuelle Auswahl treffen und erteilte Einwilligungen jederzeit für die Zukunft widerrufen.",
+    "settings": "Einstellungen",
+    "acceptAll": "Akzeptieren",
+    "close": "Schließen",
+    "settingsAllServices": "Einstellungen für alle Dienste",
+    "allowed": "akzeptiert",
+    "denied": "abgelehnt",
+    "requiredCookies": "Erforderliche Cookies",
+    "readMore": "Weiter lesen",
+    "alwaysActive": "Immer aktiv",
+    "officialWebsite": "Zur offiziellen Webseite",
+    "cookieSettings": "Cookie-Einstellungen",
+    "allowAll": "Alle zulassen",
+    "denyAll": "Alle ablehnen",
+    "saveSettings": "Speichern",
+    "privacyPolicy": "Datenschutz",
+    "imprint": "Impressum",
+    "imprintUri": "/imprint",
+    "privacyUri": "/privacy",
+    "cookieDocs": "Cookie Dokumentation",
+    "cookieDocsUri": "/cookie-documentation",
+    "credit": "",
+
+    "default": {
+      "title": "Was sind Cookies?",
+      "details": "Cookies sind kleine Textdateien, die von Ihrem Browser auf Ihrem Endgerät zur Speicherung von bestimmten Informationen abgelegt werden. Durch die gespeicherten und zurückgesandten Informationen erkennt die jeweilige Webseite, dass Sie diese mit dem Browser Ihres Endgeräts bereits aufgerufen und besucht haben. Diese Informationen nutzen wir, um dir die Webseite gemäß Ihrer Präferenzen optimal gestalten und anzeigen zu können. Dabei wird lediglich das Cookie selbst auf Ihrem Endgerät identifiziert. Eine Speicherung von personenbezogenen Daten erfolgt nur nach Ihrer ausdrücklichen Zustimmung oder wenn dies unbedingt erforderlich ist, um den angebotenen und von Ihnen aufgerufenen Dienst nutzen zu können."
+    },
+    "ads": {
+      "title": "Werbenetzwerke",
+      "details": "Werbenetzwerke können mit dem Verkauf von Werbeplatzierungen auf der Seite Einnahmen erhalten."
+    },
+    "analytic": {
+      "title": "Marketing Cookies",
+      "details": "Marketing Cookies stammen von externen Werbeunternehmen (Third Party Cookies) und werden verwendet, um Informationen über die vom Benutzer besuchten Websites zu sammeln, um zielgruppenorientierte Inhalte und Werbung für den Benutzer zu erstellen und an diesen auszuspielen."
+    },
+    "social": {
+      "title": "Social-Plugin Cookies",
+      "details": "Soziale Netzwerke können die Benutzbarkeit der Seite verbessern und ihren Bekanntheitsgrad erhöhen. Social-Plugins werden von externen Plattformen (wie Twitter, Facebook oder Instagram) geladen und in dieser Website angezeigt. Wer einen Account bei diesen Anbietern besitzt und eingelogt ist, kann direkt aus dieser Website auf die Funktionen seines Accounts zugreifen."
+    },
+    "video": {
+      "title": "Video-Sharing Cookies",
+      "details": "Video-Sharing-Dienste helfen dabei, Rich Media auf der Website hinzuzufügen und deren Sichtbarkeit zu erhöhen. Videos werden von externen Plattformen (wie Vimeo oder YouTube) geladen und in dieser Website angezeigt. Wer einen Account bei diesen Anbietern besitzt und eingelogt ist, kann direkt aus dieser Website auf die Funktionen seines Accounts zugreifen."
+    },
+    "comment": {
+      "title": "Kommentar Service Cookies",
+      "details": "Kommentar Manager erleichtern die Organisation von Kommentaren und helfen dabei Spam zu verhindern."
+    },
+    "support": {
+      "title": "Support",
+      "details": "Support Dienste erlauben es die Urheber der Seite zu kontaktieren und sie zu verbessern."
+    },
+    "api": {
+      "title": "Performance Cookies",
+      "details": "Performance Cookies sammeln aggregierte Informationen darüber, wie unsere Webseite genutzt wird, um deren Attraktivität, Inhalt und Funktionalität zu verbessern. Diese Cookies helfen uns, zu bestimmen, ob, welche, wie oft und wie lange Unterseiten unserer Webseite besucht werden und für welche Inhalte sich die Nutzer besonders interessieren. Erfasst werden zudem Suchbegriffe, das Land, die Region und ggf. die Stadt, aus der der Zugriff erfolgt, sowie der Anteil von mobilen Endgeräten, die auf unsere Webseiten zugreifen. Wir erstellen anhand dieser Informationen Statistiken, um die Inhalte unserer Webseite gezielter auf Ihre Bedürfnisse abzustimmen und unser Angebot zu optimieren."
+    },
+    "other": {
+      "title": "Andere",
+      "details": "Dienste zum Anzeigen von Web-Inhalten."
+    }
+  }
+}

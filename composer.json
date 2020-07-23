@@ -1,0 +1,13 @@
+{
+    "name": "jfeltkamp/cookiesjsr",
+    "type": "drupal-library",
+    "description": "Cookie consent tool.",
+    "keywords": [
+    ],
+    "homepage": "https://github.com/jfeltkamp/cookiesjsr",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/jfeltkamp/cookiesjsr/issues",
+        "source": "https://github.com/jfeltkamp/cookiesjsr.git"
+    }
+}
