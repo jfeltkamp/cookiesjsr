@@ -1,6 +1,6 @@
 .cookiesjsr-links {
   list-style: none;
-  margin: 0 -.75rem;
+  margin: 0 -.75em;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -16,8 +16,8 @@
 
     li {
       margin: 0;
-      padding-left: .75rem;
-      padding-right: .75rem;
+      padding-left: .75em;
+      padding-right: .75em;
       position: relative;
 
       a {
@@ -41,7 +41,7 @@
           left: 0;
           width: .3em;
           height: .3em;
-          background-color: var(--banner-font-color, #FFF);
+          background-color: var(--link-list-separator-color, #FFF);
           transform: translate(-50%, -40%);
         }
       }

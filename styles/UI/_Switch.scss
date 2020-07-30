@@ -7,7 +7,7 @@
   width: var(--switch-width, $switch-width);
   height: var(--switch-height, $switch-height);
   border-radius: var(--switch-height, $switch-height);
-  background-color: var(--switch-bg-off, $switch-bg-off);
+  background-color: var(--switch-bg-off, $color-1);
   cursor: pointer;
   box-shadow: inset -1px 2px 1px rgba(#000, .25);
   border: 0;
@@ -23,14 +23,14 @@
     height: var(--switch-height, $switch-height);
     border-radius: var(--switch-height, $switch-height);
     transform: scale(1.2);
-    background-color: var(--switch-handle-color, $switch-handle-color);
-    border: 1px solid var(--switch-border-color, $switch-border-color);
+    background-color: var(--switch-handle-color, $color-1);
+    border: 1px solid var(--switch-border-color, $color-2);
     transition: left .1s ease-in-out;
     box-shadow: -1px 2px 1px rgba(#000, .25);
   }
 
   &.active {
-    background-color: var(--switch-bg-on, $switch-bg-on);
+    background-color: var(--switch-bg-on, $color-3);
     &:after {
       left: $switch-width - $switch-height;
     }

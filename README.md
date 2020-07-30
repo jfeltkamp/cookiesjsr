@@ -1,15 +1,15 @@
 # Cookies JSR
 
-Easy plug-able cookie consent management tool built with React. 
+Easy plug-able cookie consent management tool built with React.
 
 * Allows GDPR conform cookie consent management.
 * Allows grouped and individual consent.
 * Allows easy integration of new 3rd-party services.
 * Supports translation.
-* Allows custom styling. 
+* Allows custom styling.
 
-This tool does not contain any services that involve external resources, such as Analytics or Youtube. 
-It is an easily configurable framework, with which it is possible to obtain the user's consent to the use of cookies, 
+This tool does not contain any services that implements external resources, such as Analytics or Youtube.
+It is an easily configurable framework, with which it is possible to obtain the user's consent to the use of cookies,
 to save his decisions (also in a cookie) and provides an event as entry point for dispatching own services.
 
 ## Install
@@ -24,7 +24,7 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 <html lang="de">
 <head>
   ...
-  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@0/dist/cookiesjsr.min.css">
+  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.css">
 </head>
 <body>
   ...
@@ -32,10 +32,10 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
   <!-- The Place where cookiesjsr can live in. -->
   <div id="cookiesjsr"></div> 
   <script src="/path/to/your/cookiesjsr-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@0/dist/cookiesjsr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
-``` 
+```
 
 ### Example ```cookiesjsr-config.json```
 ([Documentation](#docs-config))
@@ -82,10 +82,10 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 
 ### Example ```cookiesjsr-init.js```
 
-This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library 
+This file basically gives the base config to the JS library (see object: ```document.cookiesjsr```), where the library
 can find their config file. ([Documentation](#base-config))
 
-<a name="manage-event"></a> But you can also dispatch your consent dependent services inside of this file. 
+<a name="manage-event"></a> But you can also dispatch your consent dependent services inside of this file.
 ([Further best practices](#service-activation))
 
 ````js
@@ -142,14 +142,14 @@ document.addEventListener('cookiesjsrUserConsent', function(event) {
 In the config file are two objects expected: ```config```, ```services``` and optinal ```translation```.
 
 #### The config object
-In ```config``` you define some options about the 
-1. ```interface```: Some common option about 
+In ```config``` you define some options about the
+1. ```interface```: Some common option about
    - where to find the translation,
    - how to display the cookie consent widget.
    - ... and more
-2. ```cookie```: The users decisions what cookies will be allowed or not, are saved in another 'required' cookie. Here 
-you define the properties for this single cookie. 
-3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these 
+2. ```cookie```: The users decisions what cookies will be allowed or not, are saved in another 'required' cookie. Here
+you define the properties for this single cookie.
+3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these
 data to the backend.
 
 | Parent      | Children     | Type                                                    |
@@ -186,7 +186,7 @@ data to the backend.
 
 #### <a name="services-object"></a> The services object
 
-The ```services``` object is a simple homogeneous structure of multiple service groups containing the services that users have to accept or deny. 
+The ```services``` object is a simple homogeneous structure of multiple service groups containing the services that users have to accept or deny.
 
 ```json
 {
@@ -216,16 +216,16 @@ Each contained service in a group has 5 properties:
 
 The content of this object is just the same as the [content of a translation file](./lang/en/translation.json).
 
-<a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file. 
+<a name="translation-config"></a>If the translation from a CMS or similar the translation can also be included in the config file.
 In this case, the path to the config file must contain a placeholder for the language ID (% lang_id).
 
-However, you have to decide how you want to load the translation. A good option is to load static files as they are 
-offered here in the Git repo. In this case, simply adjust the path where the files are stored at 
+However, you have to decide how you want to load the translation. A good option is to load static files as they are
+offered here in the Git repo. In this case, simply adjust the path where the files are stored at
 ```config.interface.translationQuery```.
- 
-If the translations are to be maintained via a CMS or similar, it can be advantageous to deliver the translation with 
-the configuration, because otherwise two API calls will be executed in succession, which can delay the display of the 
-app. To achieve that the config delivers the correct translation you will have to provide a translation parameter in the 
+
+If the translations are to be maintained via a CMS or similar, it can be advantageous to deliver the translation with
+the configuration, because otherwise two API calls will be executed in succession, which can delay the display of the
+app. To achieve that the config delivers the correct translation you will have to provide a translation parameter in the
 configQuery route (see paragraph below).
 
 However, IF a translation object is included in the config, the translationQuery will not be invoked.
@@ -235,7 +235,7 @@ However, IF a translation object is included in the config, the translationQuery
 <html lang="de">
 `````
 
-By the way: The app determines the language based on the lang parameter in the HTML tag. If no parameter is available, 
+By the way: The app determines the language based on the lang parameter in the HTML tag. If no parameter is available,
 the default language of the browser is determining.
 
 ## <a name="base-config"></a>Base Config
@@ -251,9 +251,9 @@ The base config tells the library where to find the config. If the config is loa
 an apiUrl (leave empty if not).
 
 ```apiUrl```: (optional, e.g. 'https://hi-api.io/path') The base URL where your API can be reached. Leave empty if your
-website has same origin. No pending slash. 
+website has same origin. No pending slash.
 
-```configQuery```: (required) Path to your config-file (cookiesjsr-config.json). 
+```configQuery```: (required) Path to your config-file (cookiesjsr-config.json).
 If your config-file contains the translation data, the path must include a param "%lang_id" for the language id.
 ````
 configQuery: '/path/to/%lang_id/cookiesjsr-config.json'
@@ -261,12 +261,12 @@ configQuery: '/path/to/%lang_id/cookiesjsr-config.json'
 
 ## <a name="service-activation"></a>Processing consent, activation of 3rd-party services
 
-In the [code example above](#manage-event) you see how to catch the event and distribute the users consents to the 
+In the [code example above](#manage-event) you see how to catch the event and distribute the users consents to the
 individual service activation. Here we want to have a look on how to handle the 3rd-party service activation. The
-content of the functions provided in the dispatcher event (activate and fallback). 
+content of the functions provided in the dispatcher event (activate and fallback).
 
-In order to effectively suppress 3rd party cookies, the resources must already be switched off in the supplied source 
-code. I.e. that corresponding script tags or iframes (these are the most common use cases) have to be manipulated so 
+In order to effectively suppress 3rd party cookies, the resources must already be switched off in the supplied source
+code. I.e. that corresponding script tags or iframes (these are the most common use cases) have to be manipulated so
 that they do not work. => We have to find a reversible knock-out technique.
 
 What the ```activate()``` function has to do is to reanimate the service.
@@ -317,7 +317,7 @@ var dispatch = {
 
 ## En-/disable 3rd-party services from anywhere
 
-It is possible to activate third party services from anywhere on the website. It is not necessary to open the cookie 
+It is possible to activate third party services from anywhere on the website. It is not necessary to open the cookie
 widget for this. It just has to be fired a Javascript event ```cookiesjsrSetService```.
 
 Suppose you have a link on the page that should be used to activate the Matomo service...
@@ -335,7 +335,7 @@ element.addEventListener('click', function (e) {
     document.dispatchEvent(new CustomEvent('cookiesjsrSetService', { detail: options }));
 });
 ````
-As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data 
+As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data
 object should have at least one of the following properties:
 
 | Property | Value   | Description                         |
@@ -348,40 +348,51 @@ object should have at least one of the following properties:
 
 If you just want to customize colors use css vars. Copy the following code to your css and play with the values.
 
-You shouldn't have any trouble overwriting the css. The CSS is plain BEM-style and there are no "!importants" or 
+You shouldn't have any trouble overwriting the css. The CSS is plain BEM-style and there are no "!importants" or
 inline-styles.
 
 
 ```html
 <style>
-  body .cookiesjsr {
-    --ci-blue: #004c93;
-    --ci-dark: #000f37;
-    --ci-light: #FFF;
-    --ci-bg-light: #e4e5e6;
-    
-    --default-margin: 1.25rem;
+  body #cookiesjsr {
+    --default-margin: 1.25em;
+    --font-size-reset: 1rem;
     
     --btn-font-color: #FFF;
     --btn-border-color: #FFF;
     --btn-bg-color: #004c93;
+    --btn-prime-font-color: #004c93;
+    --btn-prime-border-color: #FFF;
+    --btn-prime-bg-color: #FFF;
+    --btn-inv-font-color: #004c93;
+    --btn-inv-border-color: #004c93;
+    --btn-inv-bg-color: #FFF;
+    --btn-prime-inv-font-color: #FFF;
+    --btn-prime-inv-border-color: #004c93;
+    --btn-prime-inv-bg-color: #004c93;
     
-    --banner-logo-offset: 100px; /* Mobile layout keeps space free to not overlap your logo. */
+    --link-list-font-color: #FFF;
+    --link-list-separator-color: #FFF;
+    
+    --banner-logo-offset: 100px;
     --banner-bg-color: #004c93;
     --banner-font-color: #FFF;
-    --banner-link-font-color: #FFF;
-    --banner-btn-font-color: #FFF;
-    --banner-btn-border-color: #FFF;
-    --banner-btn-bg-color: #004c93;
     
-    --layer-bg-light: #FFF;
+    --layer-header-height: 3.5em;
+    --layer-header-bg-color: #FFF;
+    --layer-header-font-color: #000f37;
+    --layer-body-bg-color: #FFF;
+    --layer-tab-bg-color: #FFF;
+    --layer-tab-font-color: #000f37;
+    --layer-tab-active-bg-color: #004c93;
+    --layer-tab-active-font-color: #FFF;
     --layer-bg-dark: #004c93;
     --layer-font-light: #FFF;
     --layer-font-dark: #000f37;
     --layer-border-color: #e4e5e6;
-    --layer-title-color: #000f37;
-    --layer-header-height: 3.5rem;
-    --layer-footer-height: 4.5rem;
+    --layer-footer-bg-color: #FFF;
+    --layer-footer-font-color: #000f37;
+    --layer-footer-height: 4.5em;
     
     --switch-border-color: #e4e5e6;
     --switch-handle-color: #FFF;
@@ -389,6 +400,8 @@ inline-styles.
     --switch-bg-on: #00AA00;
     --switch-width: 45px;
     --switch-height: 20px;
+    --switch-always-on-font-color: #00AA00;
+    --switch-always-on-bg-color: #FFF;
   }
 </style>
 ```

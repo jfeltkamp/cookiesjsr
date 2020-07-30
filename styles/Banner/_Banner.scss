@@ -12,10 +12,9 @@
   justify-content: flex-start;
   align-items: center;
 
-  padding: 1rem;
-  background-color: var(--banner-bg-color, $banner-bg-color);
-  color: var(--ci-light, $ci-light);
-  font-size: 1rem;
+  padding: 1em;
+  background-color: var(--banner-bg-color, $color-4);
+  color: var(--banner-font-color, $color-1);
   max-height: calc(100vh - #{$banner-logo-offset});
   overflow: auto;
   transform: translateY(100%);
@@ -30,7 +29,7 @@
   }
 
   a {
-    color: var(--ci-light, $ci-light);
+    color: var(--link-list-font-color, $color-1);
   }
 
   &--info,
@@ -53,7 +52,7 @@
   }
 
   &--links {
-    margin-top: .5rem;
+    margin-top: .5em;
     font-size: .85em;
   }
 

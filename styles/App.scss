@@ -6,44 +6,62 @@
 @import './Banner/Banner';
 @import './Layer/Layer';
 
-.cookiesjsr {
-  --ci-blue: #{$ci-blue};
-  --ci-dark: #{$ci-dark};
-  --ci-light: #{$ci-light};
-  --ci-bg-light: #{$ci-bg-light};
+#cookiesjsr {
   --default-margin: #{$default-margin};
+  --font-size-reset: #{$font-size-reset};
 
-  --btn-font-color: #{$ci-light};
-  --btn-border-color: #{$ci-light};
-  --btn-bg-color: #{$ci-blue};
+  --btn-font-color: #{$color-1};
+  --btn-border-color: #{$color-1};
+  --btn-bg-color: #{$color-4};
+  --btn-prime-font-color: #{$color-4};
+  --btn-prime-border-color: #{$color-1};
+  --btn-prime-bg-color: #{$color-1};
+  --btn-inv-font-color: #{$color-4};
+  --btn-inv-border-color: #{$color-4};
+  --btn-inv-bg-color: #{$color-1};
+  --btn-prime-inv-font-color: #{$color-1};
+  --btn-prime-inv-border-color: #{$color-4};
+  --btn-prime-inv-bg-color: #{$color-4};
+
+  --link-list-font-color: #{$color-1};
+  --link-list-separator-color: #{$color-1};
 
   --banner-logo-offset: 100px;
-  --banner-bg-color: #{$ci-blue};
-  --banner-font-color: #{$ci-light};
-  --banner-link-font-color: #{$ci-light};
-  --banner-btn-font-color: #{$ci-light};
-  --banner-btn-border-color: #{$ci-light};
-  --banner-btn-bg-color: #{$ci-blue};
+  --banner-bg-color: #{$color-4};
+  --banner-font-color: #{$color-1};
 
-  --layer-bg-light: #{$ci-light};
-  --layer-bg-dark: #{$ci-blue};
-  --layer-font-light: #{$ci-light};
-  --layer-font-dark: #{$ci-dark};
-  --layer-border-color: #{$ci-bg-light};
-  --layer-title-color: #{$ci-dark};
   --layer-header-height: #{$layer-header-height};
+  --layer-header-bg-color: #{$color-1};
+  --layer-header-font-color: #{$color-5};
+  --layer-body-bg-color: #{$color-1};
+  --layer-tab-bg-color: #{$color-1};
+  --layer-tab-font-color: #{$color-5};
+  --layer-tab-active-bg-color: #{$color-4};
+  --layer-tab-active-font-color: #{$color-1};
+
+  --layer-bg-dark: #{$color-4};
+  --layer-font-light: #{$color-1};
+  --layer-font-dark: #{$color-5};
+  --layer-border-color: #{$color-2};
+  --layer-footer-bg-color: #{$color-1};
+  --layer-footer-font-color: #{$color-5};
   --layer-footer-height: #{$layer-footer-height};
 
-  --switch-border-color: #{$ci-bg-light};
-  --switch-handle-color: #{$ci-light};
-  --switch-bg-off: #{$ci-light};
-  --switch-bg-on: #{$switch-bg-on};
+  --switch-border-color: #{$color-2};
+  --switch-handle-color: #{$color-1};
+  --switch-bg-off: #{$color-1};
+  --switch-bg-on: #{$color-3};
   --switch-width: #{$switch-width};
   --switch-height: #{$switch-height};
+  --switch-always-on-font-color: #{$color-3};
+  --switch-always-on-bg-color: #{$color-1};
+}
+
+.cookiesjsr--app {
+  font-size: var(--font-size-reset, $font-size-reset);
 }
 
 body .cookiesjsr--app {
-
   &,
   *, *:before, *:after {
     box-sizing: border-box;

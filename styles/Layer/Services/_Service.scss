@@ -2,10 +2,10 @@
 .cookiesjsr-service {
   display: flex;
   align-items: center;
-  background-color: rgba($ci-bg-light, 0);
+  background-color: rgba($color-2, 0);
   transition: background-color .3s ease;
   &:hover {
-    background-color: rgba($ci-bg-light, .1);
+    background-color: rgba($color-2, .1);
   }
 
   &--description {
@@ -14,16 +14,16 @@
 
     h3 {
       margin: 0;
-      font-size: 1.125rem;
+      font-size: 1.125em;
       font-weight: 400;
-      color: var(--layer-font-light, $layer-font-light);
+      color: var(--layer-font-light, $color-1);
     }
   }
 
   &--links {
     a {
-      color: var(--layer-font-light, $layer-font-light);
-      font-size: .75rem;
+      color: var(--layer-font-light, $color-1);
+      font-size: .75em;
     }
   }
 
@@ -33,13 +33,13 @@
   }
 
   &--always-on {
-    color: var(--switch-bg-on, $switch-bg-on);
+    color: var(--switch-always-on-font-color, $color-3);
     text-align: right;
     display: flex;
     justify-content: flex-end;
     white-space: nowrap;
     span {
-      background-color: var(--layer-font-light, $layer-font-light);
+      background-color: var(--switch-always-on-bg-color, $color-1);
       padding: 0 .5em;
     }
   }

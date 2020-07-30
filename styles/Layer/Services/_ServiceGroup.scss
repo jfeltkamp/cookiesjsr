@@ -5,26 +5,25 @@
   list-style: none;
 
   &--tab {
-    min-height: 3rem;
-    padding: 1rem var(--default-margin, $default-margin);
-    color: var(--ci-dark, $ci-dark);
+    min-height: 3em;
+    padding: 1em var(--default-margin, $default-margin);
     display: block;
-    font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
     margin: 0;
     border: 0;
-    background: var(--ci-light, $ci-light);
-    border-bottom: 1px solid var(--ci-bg-light, $ci-bg-light);
+    color: var(--layer-tab-font-color, $color-5);
+    background: var(--layer-tab-bg-color, $color-1);
+    border-bottom: 1px solid var(--layer-border-color, $color-2);
 
     &:last-child {
       border-bottom: 0;
     }
 
     @media (min-width: $md) {
-      padding: 1rem #{$default-margin+2rem} 1rem $default-margin;
-      width: calc(30% + 2rem);
+      padding: 1em #{$default-margin+2em} 1em $default-margin;
+      width: calc(30% + 2em);
     }
   }
   &--content {
@@ -40,21 +39,20 @@
   }
 
   &--intro {
-    padding: 1rem var(--default-margin, $default-margin);
+    padding: 1em var(--default-margin, $default-margin);
   }
 
   &.active {
     .cookiesjsr-service-group--tab {
-      color: var(--ci-light, $ci-light);
-      background: var(--ci-light, $ci-light);
-      background: var(--ci-blue, $ci-blue);
+      color: var(--layer-tab-active-font-color, $color-1);
+      background: var(--layer-tab-active-bg-color, $color-4);
       border-bottom: 0 none;
     }
 
     .cookiesjsr-service-group--content {
       display: block;
-      background: var(--ci-blue, $ci-blue);
-      color: var(--ci-light, $ci-light);
+      color: var(--layer-tab-active-font-color, $color-1);
+      background: var(--layer-tab-active-bg-color, $color-4);
       font-weight: 500;
     }
   }

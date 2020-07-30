@@ -1,43 +1,26 @@
-$ci-blue: #004c93;
-$ci-dark: #000f37;
-$ci-light: #FFF;
-$ci-bg-light: #e4e5e6;
+$color-1: #FFF;
+$color-2: #e4e5e6;
+$color-3: #00AA00;
+$color-4: #004c93;
+$color-5: #000f37;
 
-$default-margin: 1.25rem;
+$font-size-reset: 1rem;
+$default-margin: 1.25em;
 $banner-logo-offset: 100px;
 
+// horizontal breakpoints
 $xs: 420px;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
+// vertical breakpoints
 $h-sm: 668px;
 $h-md: 992px;
 
-$btn-font-color: $ci-light;
-$btn-border-color: $ci-light;
-$btn-bg-color: $ci-blue;
+$layer-header-height: 3.5em;
+$layer-footer-height: 4.5em;
 
-$banner-bg-color: $ci-blue;
-$banner-font-color: $ci-light;
-$banner-link-font-color: $ci-light;
-$banner-btn-font-color: $ci-light;
-$banner-btn-border-color: $ci-light;
-$banner-btn-bg-color: $ci-blue;
-
-$layer-bg-light: $ci-light;
-$layer-bg-dark: $ci-blue;
-$layer-font-light: $ci-light;
-$layer-font-dark: $ci-dark;
-$layer-border-color: $ci-bg-light;
-$layer-title-color: $ci-dark;
-$layer-header-height: 3.5rem;
-$layer-footer-height: 4.5rem;
-
-$switch-border-color: $ci-bg-light;
-$switch-handle-color: $ci-light;
-$switch-bg-off: $ci-light;
-$switch-bg-on: #00AA00;
 $switch-width: 45px;
 $switch-height: 20px;
