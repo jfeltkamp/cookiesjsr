@@ -24,6 +24,10 @@
     a {
       color: var(--layer-font-light, $color-1);
       font-size: .75em;
+
+      &:hover, &:active, &:visited {
+        color: var(--layer-font-light, $color-1);
+      }
     }
   }
 

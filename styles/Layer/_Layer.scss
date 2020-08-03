@@ -64,9 +64,12 @@
     background: transparent url("data:image/svg+xml,%0A%3Csvg width='27px' height='27px' viewBox='0 0 27 27' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Welcome' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='tarte-close' transform='translate(-1264.000000, -2628.000000)' fill='%23000f37'%3E%3Cg id='Group-2' transform='translate(155.000000, 2591.000000)'%3E%3Cg id='Group-3-Copy-2'%3E%3Cpolygon id='Page-1' points='1133.26296 37 1122.50065 47.762319 1111.73704 37 1109 39.7370358 1119.76361 50.5006452 1109 61.2629642 1111.73704 64 1122.50065 53.2363906 1133.26296 64 1136 61.2629642 1125.23768 50.5006452 1136 39.7370358'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center center scroll;
     background-size: contain;
     text-indent: -999em;
+    overflow: hidden;
     border: 0;
     cursor: pointer;
     padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   &--body {

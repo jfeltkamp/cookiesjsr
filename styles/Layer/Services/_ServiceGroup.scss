@@ -8,7 +8,9 @@
     min-height: 3em;
     padding: 1em var(--default-margin, $default-margin);
     display: block;
+    width: 100%;
     text-decoration: none;
+    text-align: left;
     cursor: pointer;
     font-weight: 700;
     margin: 0;
@@ -16,6 +18,8 @@
     color: var(--layer-tab-font-color, $color-5);
     background: var(--layer-tab-bg-color, $color-1);
     border-bottom: 1px solid var(--layer-border-color, $color-2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     &:last-child {
       border-bottom: 0;
