@@ -13,6 +13,16 @@
   border: 0;
   transition: background-color .1s ease-in-out;
 
+  &:focus-within:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: $switch-height/2;
+    border: 1px dotted #eee;
+    transform: scale(1.4);
+  }
+
   &:after {
     content: '';
     position: absolute;
