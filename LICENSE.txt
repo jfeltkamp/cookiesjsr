@@ -1,4 +1,4 @@
-/** @license CookieJSR v1.0.8
+/** @license CookieJSR v1.0.9
  * cookiejsr.min.js
  * cookiejsr.min.css
  *
