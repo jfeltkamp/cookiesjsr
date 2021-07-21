@@ -23,16 +23,16 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 ```html
 <html lang="de">
 <head>
-  ...
-  <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.css">
+   ...
+   <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.css">
 </head>
 <body>
-  ...
+...
 
-  <!-- The Place where cookiesjsr can live in. -->
-  <div id="cookiesjsr"></div> 
-  <script src="/path/to/your/cookiesjsr-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.js"></script>
+<!-- The Place where cookiesjsr can live in. -->
+<div id="cookiesjsr"></div>
+<script src="/path/to/your/cookiesjsr-init.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
 ```
@@ -41,42 +41,42 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 ([Documentation](#docs-config))
 ```json
 {
-  "config": {
-    "cookie": {
-      "name": "cookiesjsr",
-      "expires": 31536000000
-    },
-    "interface": {
-      "openSettingsHash": "#editCookieSettings",
-      "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
-      "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
-      "defaultLang": "en"
-    }
-  },
-  "services": {
-    "default": {
-      "id": "default",
-      "services": []
-    },
-    "analytic": {
-      "id": "analytic",
-      "services": [{
-        "key": "gtag",
-        "type": "analytic",
-        "name": "Google Analytics",
-        "uri": "https://support.google.com/analytics/answer/6004245",
-        "needConsent": true
+   "config": {
+      "cookie": {
+         "name": "cookiesjsr",
+         "expires": 31536000000
       },
-      {
-        "key": "matomo",
-        "type": "analytic",
-        "name": "Matomo",
-        "uri": "https://matomo.org/docs/privacy/",
-        "needConsent": true
-        }
-      ]
-    }
-  }
+      "interface": {
+         "openSettingsHash": "#editCookieSettings",
+         "translationQuery": "/cookiesjsr/lang/%lang_id/translation.json",
+         "availableLangs": ["en", "de", "es", "fr", "it", "nl", "pl", "ru"],
+         "defaultLang": "en"
+      }
+   },
+   "services": {
+      "default": {
+         "id": "default",
+         "services": []
+      },
+      "analytic": {
+         "id": "analytic",
+         "services": [{
+            "key": "gtag",
+            "type": "analytic",
+            "name": "Google Analytics",
+            "uri": "https://support.google.com/analytics/answer/6004245",
+            "needConsent": true
+         },
+            {
+               "key": "matomo",
+               "type": "analytic",
+               "name": "Matomo",
+               "uri": "https://matomo.org/docs/privacy/",
+               "needConsent": true
+            }
+         ]
+      }
+   }
 }
 ```
 
@@ -91,29 +91,29 @@ can find their config file. ([Documentation](#base-config))
 ````js
 // Base configuration 
 document.cookiesjsr = {
-  apiUrl: '',
-  configQuery: '/path/to/your/cookiesjsr-config.json'
+   apiUrl: '',
+   configQuery: '/path/to/your/cookiesjsr-config.json'
 }
 
 var dispatcher = {
-  matomo: {
-    activate: function() {
-      // Do stuff to enable Matomo. See best practices below.
-    },
-    fallback: function() {
-      // Do stuff to fallback. E.g. display layer where the benefits are explained,
-      // when Matomo is enabled.
-    }
-  },
-  analytics: {
-    activate: function() {
-      // Do stuff to enable Google Analytics. See best practices below.
-    },
-    fallback: function() {
-      // Do stuff to fallback. E.g. display layer where the benefits are explained,
-      // when Google Analytics is enabled.
-    }
-  }
+   matomo: {
+      activate: function() {
+         // Do stuff to enable Matomo. See best practices below.
+      },
+      fallback: function() {
+         // Do stuff to fallback. E.g. display layer where the benefits are explained,
+         // when Matomo is enabled.
+      }
+   },
+   analytics: {
+      activate: function() {
+         // Do stuff to enable Google Analytics. See best practices below.
+      },
+      fallback: function() {
+         // Do stuff to fallback. E.g. display layer where the benefits are explained,
+         // when Google Analytics is enabled.
+      }
+   }
 }
 
 /**
@@ -124,16 +124,16 @@ var dispatcher = {
  * This event is fired when DOM is loaded or user updates his settings.
  */
 document.addEventListener('cookiesjsrUserConsent', function(event) {
-  var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
-  for (var sid in services) {
-    if(typeof dispatcher[sid] === 'object') {
-      if(services[sid] === true && typeof dispatcher[sid].activate === 'function') {
-        dispatcher[sid].activate();
-      } else if(typeof dispatcher[sid].fallback === 'function') {
-        dispatcher[sid].fallback();
+   var services = (typeof event.detail.services === 'object') ? event.detail.services : {};
+   for (var sid in services) {
+      if(typeof dispatcher[sid] === 'object') {
+         if(services[sid] === true && typeof dispatcher[sid].activate === 'function') {
+            dispatcher[sid].activate();
+         } else if(typeof dispatcher[sid].fallback === 'function') {
+            dispatcher[sid].fallback();
+         }
       }
-    }
-  }
+   }
 });
 
 ````
@@ -148,9 +148,9 @@ In ```config``` you define some options about the
    - how to display the cookie consent widget.
    - ... and more
 2. ```cookie```: The users decisions what cookies will be allowed or not, are saved in another 'required' cookie. Here
-you define the properties for this single cookie.
+   you define the properties for this single cookie.
 3. ```callback```: Each time the user saves changes of his cookie settings, a callback can be invoked, sending these
-data to the backend.
+   data to the backend.
 
 | Parent      | Children     | Type                                                    |
 |-------------|--------------|---------------------------------------------------------|
@@ -171,7 +171,7 @@ data to the backend.
 |              | path             | string: (optional) path cookie is valid for.     |
 |              | secure           | boolean: (optional, default: false)              |
 |              | sameSite         | string: (optional, None/Lax/Strict, default: Lax)|
-| callback     |                  |                                                  |
+| callback     |                  | ```docs see section "Callback" below```          |
 |              | url              | string: (optional) the callback url              |
 |              | method           | string: (optional, get/post, default: get)       |
 |              | headers          | object: (optional), key-value pairs              |
@@ -190,15 +190,15 @@ The ```services``` object is a simple homogeneous structure of multiple service 
 
 ```json
 {
-    "services": {
+   "services": {
       "group_1": {
-        "id": "group_1",
-        "services": [{"service_1": "..."}, {"service_2": "..."}, {"...": "..."} ]
+         "id": "group_1",
+         "services": [{"service_1": "..."}, {"service_2": "..."}, {"...": "..."} ]
       },
       "group_2": {
-        "...": "..."
+         "...": "..."
       }
-    }
+   }
 }
 ```
 Each contained service in a group has 5 properties:
@@ -243,8 +243,8 @@ Content of your ```cookiesjsr-init.js```:
 ````js
 // Base configuration 
 document.cookiesjsr = {
-  apiUrl: '',
-  configQuery: '/path/to/your/cookiesjsr-config.json'
+   apiUrl: '',
+   configQuery: '/path/to/your/cookiesjsr-config.json'
 }
 ````
 The base config tells the library where to find the config. If the config is load from an other domain, you must give
@@ -291,27 +291,27 @@ ask again if he now wants to activate the service.
 
 ````js
 var dispatch = {
-  extservice: {
-    activate: function() {
-      jQuery('script[data-sid="extservice"]').each(function() {
-        var replacement = jQuery(this).clone().removeAttr('type');
-        jQuery(this).replaceWith(replacement.html());
-      });
-    },
-    fallback: function() {
-      // No need.
-    }
-  },
-  youtube: {
-    activate: function() {
-      jQuery('iframe[data-sid="youtube"]').each(function() {
-        jQuery(this).attr('src', jQuery(this).data('src'));
-      });
-    },
-    fallback: function() {
-      jQuery('iframe[data-sid="youtube"]').parent().prepend(jQuery('<div>Sorry, but YouTube disabled.</div>'))
-    }
-  }
+   extservice: {
+      activate: function() {
+         jQuery('script[data-sid="extservice"]').each(function() {
+            var replacement = jQuery(this).clone().removeAttr('type');
+            jQuery(this).replaceWith(replacement.html());
+         });
+      },
+      fallback: function() {
+         // No need.
+      }
+   },
+   youtube: {
+      activate: function() {
+         jQuery('iframe[data-sid="youtube"]').each(function() {
+            jQuery(this).attr('src', jQuery(this).data('src'));
+         });
+      },
+      fallback: function() {
+         jQuery('iframe[data-sid="youtube"]').parent().prepend(jQuery('<div>Sorry, but YouTube disabled.</div>'))
+      }
+   }
 }
 ````
 
@@ -330,9 +330,9 @@ Suppose you have a link on the page that should be used to activate the Matomo s
 ````js
 var element = document.getElementById('cookiesjsr-enable-matomo');
 element.addEventListener('click', function (e) {
-    e.preventDefault();
-    var options = { services: { matomo: true }};
-    document.dispatchEvent(new CustomEvent('cookiesjsrSetService', { detail: options }));
+   e.preventDefault();
+   var options = { services: { matomo: true }};
+   document.dispatchEvent(new CustomEvent('cookiesjsrSetService', { detail: options }));
 });
 ````
 As you can see, the event expects a data object, which is stored in the detail property of the CustomEvents. This data
@@ -344,6 +344,18 @@ object should have at least one of the following properties:
 | services | object  | An object with key/value-pairs where the ```key``` is the id of a 3rd-parts service and ```value``` is a boolean if the service should be enabled (true) or disabled (false). |
 | groups   | object  | An object with key/value-pairs where the ```key``` is the id of a entire group of services and ```value``` is a boolean if the services should be enabled (true) or disabled (false). |
 
+
+## Callback
+If you have defined a callback URL, this will be called (to your backend or wherever you want) immediately after the cookiesjsr cookie was set or updated. When you send a POST request, the answer of the callback should be a JSON response. The returned data is available in a JS event.
+The following code is required to process the returned data.
+
+````js
+document.addEventListener('cookiesjsrCallbackResponse', function (event) {
+  // process returned data in frontend here.
+  console.log(event.detail.response);
+});
+````
+
 ## Styling
 
 If you just want to customize colors use css vars. Copy the following code to your css and play with the values.
@@ -354,55 +366,55 @@ inline-styles.
 
 ```html
 <style>
-  body #cookiesjsr {
-    --default-margin: 1.25em;
-    --font-size-reset: 1rem;
-    
-    --btn-font-color: #FFF;
-    --btn-border-color: #FFF;
-    --btn-bg-color: #004c93;
-    --btn-prime-font-color: #004c93;
-    --btn-prime-border-color: #FFF;
-    --btn-prime-bg-color: #FFF;
-    --btn-inv-font-color: #004c93;
-    --btn-inv-border-color: #004c93;
-    --btn-inv-bg-color: #FFF;
-    --btn-prime-inv-font-color: #FFF;
-    --btn-prime-inv-border-color: #004c93;
-    --btn-prime-inv-bg-color: #004c93;
-    
-    --link-list-font-color: #FFF;
-    --link-list-separator-color: #FFF;
-    
-    --banner-logo-offset: 100px;
-    --banner-bg-color: #004c93;
-    --banner-font-color: #FFF;
-    
-    --layer-header-height: 3.5em;
-    --layer-header-bg-color: #FFF;
-    --layer-header-font-color: #000f37;
-    --layer-body-bg-color: #FFF;
-    --layer-tab-bg-color: #FFF;
-    --layer-tab-font-color: #000f37;
-    --layer-tab-active-bg-color: #004c93;
-    --layer-tab-active-font-color: #FFF;
-    --layer-bg-dark: #004c93;
-    --layer-font-light: #FFF;
-    --layer-font-dark: #000f37;
-    --layer-border-color: #e4e5e6;
-    --layer-footer-bg-color: #FFF;
-    --layer-footer-font-color: #000f37;
-    --layer-footer-height: 4.5em;
-    
-    --switch-border-color: #e4e5e6;
-    --switch-handle-color: #FFF;
-    --switch-bg-off: #FFF;
-    --switch-bg-on: #00AA00;
-    --switch-width: 45px;
-    --switch-height: 20px;
-    --switch-always-on-font-color: #00AA00;
-    --switch-always-on-bg-color: #FFF;
-  }
+   body #cookiesjsr {
+      --default-margin: 1.25em;
+      --font-size-reset: 1rem;
+
+      --btn-font-color: #FFF;
+      --btn-border-color: #FFF;
+      --btn-bg-color: #004c93;
+      --btn-prime-font-color: #004c93;
+      --btn-prime-border-color: #FFF;
+      --btn-prime-bg-color: #FFF;
+      --btn-inv-font-color: #004c93;
+      --btn-inv-border-color: #004c93;
+      --btn-inv-bg-color: #FFF;
+      --btn-prime-inv-font-color: #FFF;
+      --btn-prime-inv-border-color: #004c93;
+      --btn-prime-inv-bg-color: #004c93;
+
+      --link-list-font-color: #FFF;
+      --link-list-separator-color: #FFF;
+
+      --banner-logo-offset: 100px;
+      --banner-bg-color: #004c93;
+      --banner-font-color: #FFF;
+
+      --layer-header-height: 3.5em;
+      --layer-header-bg-color: #FFF;
+      --layer-header-font-color: #000f37;
+      --layer-body-bg-color: #FFF;
+      --layer-tab-bg-color: #FFF;
+      --layer-tab-font-color: #000f37;
+      --layer-tab-active-bg-color: #004c93;
+      --layer-tab-active-font-color: #FFF;
+      --layer-bg-dark: #004c93;
+      --layer-font-light: #FFF;
+      --layer-font-dark: #000f37;
+      --layer-border-color: #e4e5e6;
+      --layer-footer-bg-color: #FFF;
+      --layer-footer-font-color: #000f37;
+      --layer-footer-height: 4.5em;
+
+      --switch-border-color: #e4e5e6;
+      --switch-handle-color: #FFF;
+      --switch-bg-off: #FFF;
+      --switch-bg-on: #00AA00;
+      --switch-width: 45px;
+      --switch-height: 20px;
+      --switch-always-on-font-color: #00AA00;
+      --switch-always-on-bg-color: #FFF;
+   }
 </style>
 ```
 
