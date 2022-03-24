@@ -61,7 +61,7 @@
     flex-direction: column;
     padding: 0;
 
-    @media (min-width: $xs) {
+    @media (min-width: $xl) {
       flex-direction: row;
     }
 
@@ -69,11 +69,7 @@
 
   button {
     &.denyAll {
-      display: none;
-
-      @media (min-width: $xl) {
-        display: inline-block;
-      }
+      display: inline-block;
     }
   }
 

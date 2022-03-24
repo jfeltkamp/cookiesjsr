@@ -122,11 +122,19 @@
 
 
   button {
-    &.denyAll {
+    &.denyAll,
+    &.allowAll {
       display: none;
 
       @media (min-width: $sm) {
         display: inline-block;
+      }
+    }
+    &.save {
+      @media (max-width: $sm) {
+        padding: 0 2em;
+        width: auto;
+        margin-left: auto;
       }
     }
   }
