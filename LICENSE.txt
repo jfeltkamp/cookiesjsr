@@ -1,7 +1,7 @@
-/** @license CookiesJSR 2.0.4
+/** @license CookiesJSR 2.0.6
  * file: LICENSE.txt
  *
- * Copyright (c) 2024 Joachim Feltkamp, Hamburg, Germany.
+ * Copyright (c) 2025 Joachim Feltkamp, Hamburg, Germany.
  *
  * This source code is licensed under the GPL-3.0-or-later license found in the
  * LICENSE.txt file in the root directory of this source tree.

@@ -24,14 +24,14 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 <html lang="de">
 <head>
    ...
-   <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.css">
+   <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@2/dist/cookiesjsr.min.css">
 </head>
 <body>
 ...
 
 <!-- The Place where cookiesjsr can live in. -->
 <div id="cookiesjsr"></div>
-<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@2/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
 ```

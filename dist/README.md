@@ -24,14 +24,14 @@ to save his decisions (also in a cookie) and provides an event as entry point fo
 <html lang="de">
 <head>
    ...
-   <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.css">
+   <link rel="stylesheet" media="screen" href="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@2/dist/cookiesjsr.min.css">
 </head>
 <body>
 ...
 
 <!-- The Place where cookiesjsr can live in. -->
 <div id="cookiesjsr"></div>
-<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@2/dist/cookiesjsr.min.js"></script>
 </body>
 </html>
 ```
@@ -88,7 +88,7 @@ can find their config file. ([Documentation](#base-config))
 ([Further best practices](#service-activation))
 
 ````js
-// Base configuration 
+// Base configuration
 document.cookiesjsr = {
    apiUrl: '',
    configQuery: '/path/to/your/cookiesjsr-config.json'
@@ -240,7 +240,7 @@ the default language of the browser is determining.
 ## <a name="base-config"></a>Base Config
 Content of your ```cookiesjsr-init.js```:
 ````js
-// Base configuration 
+// Base configuration
 document.cookiesjsr = {
    apiUrl: '',
    configQuery: '/path/to/your/cookiesjsr-config.json'
@@ -397,7 +397,6 @@ inline-styles.
       --banner-bg-color: #004c93;
       --banner-font-color: #FFF;
 
-      --layer-header-height: 3.5em;
       --layer-header-bg-color: #FFF;
       --layer-header-font-color: #000f37;
       --layer-body-bg-color: #FFF;
@@ -411,7 +410,6 @@ inline-styles.
       --layer-border-color: #e4e5e6;
       --layer-footer-bg-color: #FFF;
       --layer-footer-font-color: #000f37;
-      --layer-footer-height: 4.5em;
 
       --switch-border-color: #e4e5e6;
       --switch-handle-color: #FFF;

@@ -4,8 +4,8 @@ import buildify from "buildify";
 import ncp from "ncp";
 import { unlink, rmSync } from "node:fs";
 
-import pjson from './package.json' assert { type: "json" };
-import mapping from './libsrc/mapping.json' assert { type: "json" };
+import pjson from './package.json' with { type: "json" };
+import mapping from './libsrc/mapping.json' with { type: "json" };
 
 const tokens = {
   ...pjson,
