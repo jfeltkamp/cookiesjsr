@@ -44,7 +44,7 @@
     "open source"
   ],
   "peerDependencies": {
-    "svelte": "^5.0.0"
+    "svelte": "^5.53.6"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^7.0.0",
@@ -54,7 +54,7 @@
     "buildify": "^0.4.0",
     "ncp": "^2.0.0",
     "publint": "^0.3.14",
-    "svelte": "^5.0.0",
+    "svelte": "^5.53.6",
     "svelte-preprocess-sass": "^2.0.1",
     "typescript": "^5.3.2",
     "vite": "^7.1.10"
