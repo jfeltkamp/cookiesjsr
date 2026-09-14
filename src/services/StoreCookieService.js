@@ -79,7 +79,7 @@ class StoreCookieService {
     sameSite = "; SameSite=" + sameSite;
     let domain = conf.get('config.cookie.domain', '')
     domain = (domain.length) ? " domain=" + domain + ';' : "";
-    document.cookie = cookie + '; expires=' + date.toUTCString() + secure + sameSite + '; path=/' + domain + ';';
+    document.cookie = cookie + '; expires=' + date.toUTCString() + secure + sameSite + '; path=/ ;' + domain;
   }
 
   /**
