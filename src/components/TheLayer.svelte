@@ -76,7 +76,7 @@
 </script>
 
 <div class="cookiesjsr-layer-wrapper">
-    <button class="cookiesjsr-layer-overlay" title={t('close')} on:click={closeLayer} aria-label="Closimg overlay" ></button>
+    <button class="cookiesjsr-layer-overlay" title={t('close')} on:click={closeLayer} aria-label={t('close')} ></button>
     <div class="cookiesjsr-layer">
         <header class="cookiesjsr-layer__header">
             <span class="cookiesjsr-layer__title">{t('cookieSettings')}</span>
